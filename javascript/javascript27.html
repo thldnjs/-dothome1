@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        // let i = 1;
+        // while(i<=100){
+        //     document.write(i+". 실행되었습니다.<br />");     //실행문
+        //     i++;   //증감식
+        // }
+
+        // //5부터 50까지 출력
+        // //5. 실행되었습니다.
+        // let i = 5;
+        // while(i<=50){
+        //     document.write(i+". 실행되었습니다.<br />");     //실행문
+        //     i++;   //증감식*/
+        // }
+
+        // 1부터 100까지 출력(짝수만 출력);
+
+        // let num = 1;
+        // while(num<=100){
+        //     if(num %2 ==0){
+        //     document.write(num+ ". 실행되었습니다.<br />");
+        //     }
+        //     num++;
+        // }
+        // let num = 1;
+        // while(num<=100){
+        //     if(num %4==0){
+        //     document.write(num+ ".실행되었습니다.<br />");
+        //     }
+        //     num++;
+        // }
+
+        // 1부터 100까지 출력(4의 배수와 6의 배수 출력)
+        // let num2 = 1;
+        // while(num2<=100){
+        //     if(num2 % 4 ==0 && num2 % 6 ==0){
+        //         document.write(num2+ ".실행되었습니다.<br />");
+        //     }
+        //     num2++;
+        // }
+
+        //1부터 100까지 출력(짝수는 파란색으로, 홀수는 빨간색으로 출력)
+        let num3 = 1;
+        while(num3 <101){
+            if(num3 % 2 ==0){
+                //짝수
+                document.write(num3+ "<span style='color:blue'>.실행되었습니다.</span><br />");
+            } else {
+                //홀수
+                document.write(num3+ "<span style='color:red'>.실행되었습니다.</span><br />");
+            }
+            num3++;
+        }
+        
+    </script>
+</body>
+</html>

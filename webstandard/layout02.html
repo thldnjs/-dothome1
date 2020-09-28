@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout02</title>
+    <style>
+         @font-face {
+        font-family: 'S-CoreDream-8Heavy';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        *{
+            padding: 0; 
+            margin: 0;
+            }
+        #wrap{
+            width: 1200px; 
+            height: 1600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 72px;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+            }
+        #header{
+            width: 1200px; 
+            height: 150px; 
+            background: #e5f2d6;
+            line-height: 150px;
+            }
+        #nav{
+            width: 1200px; 
+            height: 150px; 
+            background: #bede98;
+            line-height: 150px;
+            }
+        #side_left{
+            width: 300px; 
+            height: 1100px; 
+            background: #9ccc65;
+            float: left;
+            line-height: 1100px;
+            }
+        #contents{
+            width: 600px; 
+            height: 1100px; 
+            background: #7cb342;
+            float: left;
+            line-height: 1100px;
+            }
+        #side_right{
+            width: 300px; 
+            height: 1100px; 
+            background: #689f38;
+            float: left;
+            line-height: 1100px;
+            }
+        #footer{
+            width: 1200px; 
+            height: 200px; 
+            background: #33691e;
+            clear: both;
+            line-height: 200px;
+            }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <div id="side_left">left</div>
+        <div id="contents">contents</div>
+        <div id="side_right">right</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>

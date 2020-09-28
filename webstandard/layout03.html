@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout03</title>
+    <style>
+        @font-face {
+        font-family: 'S-CoreDream-8Heavy';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        body{background-color: #fbe9e7;}
+        *{margin: 0; padding: 0;}
+        #wrap {
+            width: 1200px; 
+            height: 1600px;
+            text-align: center;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-family: 'S-CoreDream-8Heavy';
+            font-size: 72px;
+            color: white;
+            
+        }
+        #header {
+            width: 800px; 
+            height: 400px; 
+            background: #ffccbc;
+            float: right;
+            line-height: 400px;
+            
+        }
+        #side {
+            width: 400px; 
+            height: 1600px; 
+            background: #ffab91;
+            float: left;
+            line-height: 1600px;
+            
+        }
+        #contents {
+            width: 800px; 
+            height: 800px; 
+            background: #ff7043;
+            float: left;
+            line-height: 800px;
+        }
+        #footer {
+            width: 800px; 
+            height: 400px; 
+            background: #ff5722;
+            float: left;   
+            line-height: 400px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="side">side</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>

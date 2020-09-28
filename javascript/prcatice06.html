@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+
+<body>
+    <script>
+        let num = 1;
+        function gallery(direct){
+            if(direct){
+                if(num == 8) return;
+                num++;
+            } else{
+                if(num == 1) return;
+                num--;
+            }
+        }
+        gallery(8);
+        document.write(num);
+    </script>
+</body>
+
+</html>
