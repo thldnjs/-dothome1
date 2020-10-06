@@ -99,10 +99,10 @@
     height: 60px;
     display: inline-block;
     background: url(../img/icon.png);
-    background-position: 0 -600px;
+    background-position: 0 -660px;
     margin-top: 5px;
 }
 .tit .btn:hover {
-    background-position: -60px -600px;
+    background-position: -60px -660px;
 }
 
