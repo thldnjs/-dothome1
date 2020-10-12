@@ -6,6 +6,33 @@
     <title></title>
 </head>
 <body>
-    
+    <script>
+        document.getElementById("img").setAttribute("alt", "이미지입니다.");
+
+//버튼을 클릭하면 경고창 출력
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
+let image = document.getElementById("img");
+let num = 1;
+
+prev.addEventListener("click", function () {
+    if (num == 1) {
+        alert("처음 이미지입니다.");
+        return;
+    }
+    num--;
+    image.setAttribute("src", "img/pic_"+ num +".jpg");
+    console.log(num);
+});
+next.addEventListener("click", function () {
+    if (num == 8) {
+        alert("마지막 이미지입니다.");
+        return;
+    }
+    num++;
+    image.setAttribute("src", "img/pic_"+ num +".jpg");
+    console.log(num);
+});
+    </script>
 </body>
 </html>
