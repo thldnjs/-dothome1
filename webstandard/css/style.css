@@ -195,7 +195,15 @@
     background: url(../img/dot.gif) no-repeat 0 8px;
     overflow: hidden; white-space: nowrap; text-overflow: ellipsis;} /* 한줄 효과 */
 .notice ul li a {font-size: 12px;}
-.notice a.more {position: absolute; right: 0; top: 0; width: 17px; height: 17px; display: block; background: url(../img/icon.png) -150px -90px;}
+.notice a.more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    display: block;
+    background: url(../img/icon.png) -150px -90px;
+}
 
 /* 게시판2 */
 .notice2 {

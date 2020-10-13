@@ -6,18 +6,19 @@
     <title>jQuery</title>
     <style>
         li {margin: 2px;}
+        a {padding: 0 10px;}
     </style>
 </head>
 <body>
     <h1>기본 선택자</h1>
     <div id="sample">
         <ul id="list1" class="list">
-            <li class="list1"><a href="#">list1</a></li>
-            <li class="list2"><a href="#">list2</a></li>
-            <li class="list3"><a href="#">list3</a></li>
-            <li class="list4"><a href="#">list4</a></li>
-            <li class="list5"><a href="#">list5</a></li>
-            <li class="list6"><a href="#">list6</a></li>
+            <li class="list1"><a href="https://www.daum.net">list1</a></li>
+            <li class="list2"><a href="https://www.naver.com/">list2</a></li>
+            <li class="list3"><a href="#list2">list3</a></li>
+            <li class="list4"><a href="#" class="link">list4</a></li>
+            <li class="list5"><a href="#" class="link">list5</a></li>
+            <li class="list6"><a href="https://app.gitbook.com/">list6</a></li>
             <li class="list7"><a href="#">list7</a></li>
             <li class="list8"><a href="#">list8</a></li>
             <li class="list9"><a href="#">list9</a></li>
@@ -111,11 +112,50 @@
         // $(".list5, .list8, .list9").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //그룹 선택자
 
         //계층 선택자
-        //하위 선택자
         // $(".list li").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //하위 선택자
         // $(".list > li").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});  //자식 선택자
         // $(".list5 + li").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //형제 선택자
         // $(".list5 ~ li").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //형제들 선택자
+
+        //속성 선택자
+        // $("li a[href='https://www.naver.com/']").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"})
+        // $("li a[href^='https']").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"})
+        // $("li a[href$='net']").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"})
+        // $("li a[href*='naver']").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"})
+        // $("li a[href][class]").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"})
+
+        //기본 필터 선택자
+        // $("li:eq(4)").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"}) //4번째만 불 들어옴
+        // $("li:lt(4)").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"}) //처음부터 4번째 전까지만 불 들어옴
+        // $("li:gt(4)").css({backgroundColor:"#f44336", border:"1px dashed #303F9F" , color:"#fff"}) //4번째 이후부터만 불 들어옴
+        // $(":header").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //헤더부분만 불 들어옴
+        // $("li:first").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //1번만 불 들어옴
+        // $("li:last").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //마지막만 불 들어옴
+        // $("li:odd").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); // 짝수번호만 불 들어옴
+        // $("li:even").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //홀수번호만 불 들어옴
+
+        //내용 필터 선택자
+        // $("li:contains('list4')").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li a:empty").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:parent").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:has(li)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+
+        //보임 필터 선택자
+        // $("li:hidden").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:visivle").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+
+        //자식 요소 필터 선택자
+        // $("li:first").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //첫번째와 관련된 부모 요소만 보여준다.
+        // $("li:first-child").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //첫번째와 관련된 부모자식 요소를 보여줌
+        // $("li:last").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //첫번째와 관련된 부모자식 요소를 보여줌
+        // $("li:last-child").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"}); //첫번째와 관련된 부모자식 요소를 보여줌
+        // $("li:nth-child").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:nth-child(4)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:nth-child(4n)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:nth-child(2n+1)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:nth-child(odd)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:nth-child(even)").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
+        // $("li:only-child").css({"backgroundColor":"#BBDEFB", "border":"1px dashed #303F9F"});
     </script>
 </body>
 </html>
