@@ -6,4 +6,4 @@
 <br>
 <br>
 #제이쿼리 예제
-<a href="http://127.0.0.1:5500/jquery/jquery04.html">바로가기</a>
+find() : <a href="http://127.0.0.1:5500/jquery/jquery04.html">바로가기</a>
