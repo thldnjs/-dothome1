@@ -6,4 +6,4 @@
 <br>
 <br>
 #제이쿼리 예제
-find() : <a href="https://github.com/thldnjs/dothome1/blob/master/jquery/jquery04.html">바로가기</a>
+find() : <a href="https://thldnjs.github.io/dothome1/jquery/jquery04.html">바로가기</a>
