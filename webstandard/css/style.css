@@ -441,4 +441,20 @@
     content: '';
     width: 1px; height: 12px; background: #ccc; position: absolute; left: 0px; top: 2px;
 }
+.footer li:first-child::before {
+    width: 0; height: 0;
+}
 .footer address {margin-top: 20px;}
+
+/* 로그인 */
+.popup {margin-top: 15px;}
+.popup h4 {font-size: 14px;
+    color: #0093bd;
+    padding-bottom: 5px;
+    font-weight: bold;}
+.popup ul {overflow: hidden;}
+.popup li {float: left; width: 33.3%; padding: 3px; box-sizing: border-box;}
+.popup li a {}
+.popup li a span {}
+.popup li a span img {width: 100%;}
+
