@@ -450,11 +450,12 @@
 .popup {margin-top: 15px;}
 .popup h4 {font-size: 14px;
     color: #0093bd;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     font-weight: bold;}
 .popup ul {overflow: hidden;}
-.popup li {float: left; width: 33.3%; padding: 3px; box-sizing: border-box;}
-.popup li a {}
-.popup li a span {}
-.popup li a span img {width: 100%;}
+.popup li {float: left; width: 93px; margin-right: 5px;}
+.popup li:last-child {margin-right: 0;}
+.popup li img {width: 100%;}
+
+
 
