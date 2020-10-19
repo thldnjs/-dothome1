@@ -425,7 +425,7 @@
 .login_header .lh_ip em {color: #0093bd; text-decoration: underline;}
 .login_contents {position: relative;}
 .login_contents .lc_btn {position: absolute; right: 0; top: 0; width: 62px; height: 47px; background: #fff; border: 1px solid #bebebe;}
-.login_contents .input_text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background #fff;}
+.login_contents .input_text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background: #fff;}
 .login_footer {margin-top: 5px;}
 .login_footer li {display: inline;}
 .login_footer li a {font-size: 12px;}
