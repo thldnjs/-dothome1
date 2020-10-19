@@ -28,7 +28,7 @@
 #footer {border-top: 1px solid#fff;}
 
 /* 컨텐츠 레이아웃 */
-#cont_nav {background: #f6fdff;}
+#cont_nav {background: #f6fdff; display: none;}
 #cont_tit {background: #eaf7fd;}
 #cont_ban {background: #dceff7;}
 #cont_cont {background: #f6fdff;}
@@ -106,11 +106,12 @@
     height: 60px;
     display: inline-block;
     background: url(../img/icon.png);
-    background-position: 0 -660px;
+    background-position: 0 -600px;
     margin-top: 5px;
 }
-.tit .btn:hover {
-    background-position: -60px -660px;
+
+.tit .btn.on {
+    background-position: -0px -660px;
 }
 
 /* 배너 */
@@ -415,6 +416,20 @@
 .notice4 ul li span {float: right; width: 30%;}
 .notice4 a.more {position: absolute; top: 8px; right: 9px;}
 
+/* 로그인 */
+#login-wrap {background: #f2f4f5; padding: 15px; margin-bottom: 15px;}
+.login_header {overflow: hidden; font-size: 12px; height: 30px;}
+.login_header .lh_check {float: left; padding-right: 15px;}
+.login_header .lh_check .input_check {vertical-align: -2px;}
+.login_header .lh_ip {float: left;}
+.login_header .lh_ip em {color: #0093bd; text-decoration: underline;}
+.login_contents {position: relative;}
+.login_contents .lc_btn {position: absolute; right: 0; top: 0; width: 62px; height: 47px; background: #fff; border: 1px solid #bebebe;}
+.login_contents .input_text {width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background #fff;}
+.login_footer {margin-top: 5px;}
+.login_footer li {display: inline;}
+.login_footer li a {font-size: 12px;}
+
 /* 갤러리 */
 .gallery {border: 1px solid #ccc; height: 255px; position: relative; overflow: hidden;}
 .gallery h4 {font-size: 14px; color: #0093bd; padding: 10px 0 8px 11px; border-bottom: 1px solid #ccc;}
@@ -456,6 +471,5 @@
 .popup li {float: left; width: 93px; margin-right: 5px;}
 .popup li:last-child {margin-right: 0;}
 .popup li img {width: 100%;}
-
 
 
