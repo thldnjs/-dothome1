@@ -11,3 +11,8 @@ find() : <a href="https://thldnjs.github.io/dothome1/jquery/jquery04.html">바�
 <br>
 <br>
 addClass() : <a href="https://thldnjs.github.io/dothome1/jquery/jquery06_addClass2.html">바로가기</a>
+
+<br>
+<br>
+#닷홈 사이트
+<a href="http://thldnjs.dothome.co.kr/index.html">바로가기</a>
