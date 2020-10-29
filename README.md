@@ -1,8 +1,10 @@
 # dothome1
 
 #웹표준 사이트 만들기
-<a href="https://thldnjs.github.io/dothome1/webstandard/index.html">바로가기</a>
+<a href="https://thldnjs.github.io/dothome1/webstandard/index.html">바로가기</a><br>
 
+#웹표준 사이트 만들기2
+<a href="http://thldnjs.dothome.co.kr/responsive/index.html">바로가기</a>
 <br>
 <br>
 #제이쿼리 예제
