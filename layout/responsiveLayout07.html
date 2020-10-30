@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout07</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {}
+        #header {width: 100%; height: 100px; background: #bbdefb;}
+        #content1 {width: 100%; height: 300px; background: #90caf9;}
+        #content2 {overflow: hidden; background: #64b5f6;}
+        #content2 .cont2-article1 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article2 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article3 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article4 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article5 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article6 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article7 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article8 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article9 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #content2 .cont2-article10 {float: left; width: 10%; height: 130px; margin: 5%; border-radius: 18%; background: #1565c0;}
+        #footer {width: 100%; height: 100px; background: #42a5f5;}
+
+        .container {width: 1200px;margin: 0 auto;}
+
+        @media (max-width: 1210px){
+            .container {width: 100%;}
+            #content2 .cont2-article1 {width: 15%;}
+            #content2 .cont2-article2 {width: 15%;}
+            #content2 .cont2-article3 {width: 15%;}
+            #content2 .cont2-article4 {width: 15%;}
+            #content2 .cont2-article5 {display: none;}
+            #content2 .cont2-article6 {width: 15%;}
+            #content2 .cont2-article7 {width: 15%;}
+            #content2 .cont2-article8 {width: 15%;}
+            #content2 .cont2-article9 {width: 15%;} 
+            #content2 .cont2-article10 {display: none;}
+        }
+        @media (max-width: 900px){
+            #content2 .cont2-article1 {width: 20%;}
+            #content2 .cont2-article2 {width: 20%;}
+            #content2 .cont2-article3 {width: 20%;}
+            #content2 .cont2-article4 {width: 20%;}
+            #content2 .cont2-article6 {width: 20%;}
+            #content2 .cont2-article7 {width: 20%;}
+            #content2 .cont2-article8 {width: 20%;}
+            #content2 .cont2-article9 {width: 20%;} 
+            #content2 .cont2-article10 {display: block; width: 20%;} 
+        }
+        @media (max-width: 480px){
+            #content2 .cont2-article1 {width: 30%;}
+            #content2 .cont2-article2 {width: 30%;}
+            #content2 .cont2-article3 {width: 30%;}
+            #content2 .cont2-article4 {width: 30%;}
+            #content2 .cont2-article5 {display: block; width: 30%;}
+            #content2 .cont2-article6 {width: 30%;}
+            #content2 .cont2-article7 {width: 30%;}
+            #content2 .cont2-article8 {width: 30%;}
+            #content2 .cont2-article9 {width: 30%;} 
+            #content2 .cont2-article10 {display: block; width: 30%;} 
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header"></header>
+            <!-- //header -->
+            <section id="content1"></section>
+            <!-- //content1 -->
+            <section id="content2">
+                <article class="cont2-article1"></article>
+                <article class="cont2-article2"></article>
+                <article class="cont2-article3"></article>
+                <article class="cont2-article4"></article>
+                <article class="cont2-article5"></article>
+                <article class="cont2-article6"></article>
+                <article class="cont2-article7"></article>
+                <article class="cont2-article8"></article>
+                <article class="cont2-article9"></article>
+                <article class="cont2-article10"></article>
+            </section>
+            <!-- //content2 -->
+            <footer id="footer"></footer>
+            <!-- //footer -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>
