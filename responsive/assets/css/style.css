@@ -77,22 +77,9 @@
 .nav > div:last-child li {width: 100%;}
 
 /* 타이틀 */
-.tit {}
-.tit h2 {
-    text-align: center;
-    font-size: 40px;
-    padding: 5px;
-    color: #2c94c4;
-    letter-spacing: 2px;
-    font-family: "Nanum Brush Script";
-}
-.tit .btn {
-    position: absolute;
-    background:
-}
-.tit a span {}
-
-.tit .fa fa-chevron-circle-down {width: 100px; height: 100px;}
+ .tit {position: relative;}
+.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4; font-family: 'Nanum Brush Script', cursive;}
+.tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px;}
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
