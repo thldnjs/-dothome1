@@ -1,10 +1,19 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top; }
 #nav {background-color: #f6fdff;}
+#title {background-color: #eaf7fd;}
+#contents .container {
+    border-right: 1px solid #dbdbdb; 
+    border-left: 1px solid #dbdbdb;
+}
+#cont_left {float: left; width: 250px; height: 1000px;}
+#cont_center {overflow: hidden; height: 1000px; margin-right: 250px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px; height: 1000px;}
+#footer {height: 200px; border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
 
-.container {width: 1200px; margin: 0 auto; /*background: rgba(0, 0, 0, 0.3);*/}
+.container {position: relative; width: 1200px; margin: 0 auto; /*background: rgba(0, 0, 0, 0.3);*/}
 
 /* 헤더 */
 .header .header_menu {text-align: right;}
@@ -43,7 +52,6 @@
     transition: 1s;
 }
 
-
 /* 전체 메뉴 */
 .nav {overflow: hidden; padding: 25px 0;}
 .nav > div {float: left; width: 40%;}
@@ -55,14 +63,14 @@
     font-weight: bold;
 }
 .nav > div ol {overflow: hidden;}
-.nav > div li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; padding: 2px; font-size: 15px;}
+.nav > div li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box; padding: 2px; font-size: 14px;}
 .nav > div li::before {
     content: '';
-    width: 3px; height: 3px;
+    width: 4px; height: 4px;
     background-color: #25a2d0;
     border-radius: 50%;
     position: absolute;
-    left: 0; top: 13px;
+    left: 1px; top: 10px;
 }
 .nav > div li a {position: relative; transition: all 0.3s ease-out;}
 .nav > div li a::after {
@@ -77,11 +85,53 @@
 .nav > div:last-child li {width: 100%;}
 
 /* 타이틀 */
- .tit {position: relative;}
-.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4; font-family: 'Nanum Brush Script', cursive;}
-.tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px; background: url(../img/icon.png) no-repeat 0 -600px;}
+ .tit {position: relative; text-align: center;}
+.tit h2 {font-family: "Nanum Brush Script"; font-size: 39px; color: #0093bd; padding: 5px 0;}
+.tit .btn {
+    position: absolute; right: 0; top: 5px;
+    width: 60px; height: 60px;
+    background: #3192bf;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 35px;
+    color: #fff;
+}
+.tit .btn:hover {
+    box-shadow: 
+    0 0 0 3px rgba(71, 154, 191, 0.9) inset,
+    0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* 컨텐츠 영역 */
+.columm {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.columm .col_tit {font-size: 20px; color: #2f7fa6; padding-bottom: 5px;}
+.columm .col_desc {
+    border-bottom: 1px dashed #dbdbdb;
+    padding-bottom: 15px; margin-bottom: 15px;
+    color: #878787; line-height: 18px;
+}
+.columm.col1 {}
+.columm.col2 {}
+.columm.col3 {border-bottom: 0;}
+.columm.col4 {}
+.columm.col5 {}
+.columm.col6 {border-bottom: 0;}
+.columm.col7 {}
+.columm.col8 {}
+.columm.col9 {border-bottom: 0;}
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
 }
+
+@media (max-width: 960px){
+    #cont_right {position: static; width: 100%; height: 400px;}
+    #cont_center {margin-right: 0;}
+}
+
+@media (max-width: 768px){
+    #cont_left {float: none; width: 100%; height: 400px;}
+    #cont_center {height: 400px;}
+}
+
