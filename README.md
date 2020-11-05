@@ -17,4 +17,4 @@ addClass() : <a href="https://thldnjs.github.io/dothome1/jquery/jquery06_addClas
 <br>
 <br>
 #닷홈 사이트
-<a href="http://thldnjs.dothome.co.kr/index.html">바로가기</a>
+<a href="http://thldnjs.dothome.co.kr/">바로가기</a>
