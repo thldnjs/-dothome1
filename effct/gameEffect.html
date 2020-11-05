@@ -48,7 +48,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body cz-shortcut-listen="true">
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
         <div class="container">
@@ -64,10 +64,8 @@
             <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
                 <ul class="nav navbar-nav">
                     <li><a href="https://jscoding.tistory.com/">Tistory</a></li>
-                    <li><a href="https://codepen.io/thldnjs">codepen</a></li>
-                    <li><a href="https://app.gitbook.com/@thldnjs1234/s/javascript-jquery/">gitbook</a></li>
-                    <li><a href="https://wess.tistory.com/">github</a></li>
-                    <li><a href="https://www.figma.com/@thldnjs1234">figma</a></li>
+                    <li><a href="https://codepen.io/thldnjs">Codepen</a></li>
+                    <li><a href="https://github.com/thldnjs/dothome1">Github</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,119 +73,122 @@
     <div class="bs-header bgs5" id="content">
         <div class="container">
             <h1>gameEffect Reference v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://thldnjs.dothome.co.kr/" target="_blank">thldnjs.dothome.co.kr</a></p>
+            <p><a href="https://hgy5710.dothome.co.kr" target="_blank">hgy5710.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9" role="main">
                 <!-- 배너 광고 -->
-                <script src="https://ads-partners.coupang.com/g.js"></script>
-                <script>
-                    new PartnersCoupang.G({
-                        id: 347683
-                    });
-                </script>
+                <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                        <ins style="display: inline;"><iframe id="347691-cdea4369d1fe8" name="347691-cdea4369d1fe8" width="847" height="100" scrolling="no" frameborder="0" style="vertical-align:top" src="https://ads-partners.coupang.com/widgets.html?id=347691&amp;rUrl=http%3A%2F%2Fhgy5710.dothome.co.kr%2F&amp;pUrl=http%3A%2F%2Fhgy5710.dothome.co.kr%2Feffect%2FgameEffect.html&amp;resolution=1920x1080#gid=347691-cdea4369d1fe8"></iframe></ins><script>
+                            new PartnersCoupang.G({ id:347691 });
+                        </script>
+                </div>
                 <!-- //배너 광고 -->
-                
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">Quiz1</h2>
-                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트 / 제이쿼리)</p>
-                        <p class="codepen" data-height="650" data-theme-id="light" data-default-tab="result" data-user="thldnjs" data-slug-hash="rNLyMMw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Quiz Project1">
-                            <span>See the Pen <a href="https://codepen.io/thldnjs/pen/rNLyMMw">
-                            Quiz Project1</a> by thldnjs (<a href="https://codepen.io/thldnjs">@thldnjs</a>)
-                            on <a href="https://codepen.io">CodePen</a>.</span>
-                          </p>
-                          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
+                    <div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="650" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/giyoung1225/embed/OJXpRbK?height=650&amp;theme-id=light&amp;default-tab=result&amp;user=giyoung1225&amp;slug-hash=OJXpRbK&amp;pen-title=Quiz%20Project1&amp;name=cp_embed_1" style="width: 100%; overflow:hidden; display:block;" title="Quiz Project1" loading="lazy" id="cp_embed_OJXpRbK"></iframe></div>
+                    <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    
+                    <div class="javascriptSource">
+                        <h3 class="btn btn-primary btn-lg">javascript Source</h3>
+<pre class="line-numbers  language-javascript"><code class=" language-javascript"><span class="token comment">//문제 정보</span>
+<span class="token keyword">const</span> quizNum <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizAsk <span class="token operator">=</span> <span class="token string">"태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizAnswer <span class="token operator">=</span> <span class="token string">"&lt;a&gt;"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizEx <span class="token operator">=</span> <span class="token string">"HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."</span><span class="token punctuation">;</span>
 
-                          <div class="javascriptSource">
-                              <h3 class="btn btn-primary btn-sm">javascript Source</h3>
-<pre class="line-numbers language-javascript"><code>문제 정보
-const quizNum = "1";
-const quizAsk = "태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?";
-const quizAnswer = "&lt;a&gt";
-const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+<span class="token comment">//선택자</span>
+<span class="token keyword">const</span> question <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> question <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionNum <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".num"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionBtn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-btn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionAnswer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionEx <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-ex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-선택자
-const question = document.querySelector(".question");
-const questionNum = document.querySelector(".num");
-const questionBtn = document.querySelector(".confirm-btn");
-const questionAnswer = document.querySelector(".confirm-answer");
-const questionEx = document.querySelector(".confirm-ex");
+<span class="token comment">//문제 번호 출력</span>
+questionNum<span class="token punctuation">.</span>innerText <span class="token operator">=</span> quizNum<span class="token punctuation">;</span>
 
-문제 출력
-questionNum.innerText = quizNum;
-$(".num").text(quizNum);
-questionNum.innerHTML = quizNum;
-$(".num").html(quizNum);
-question.innerText = quizAsk;
-questionAnswer.innerHTML = quizAnswer;
-questionEx.innerHTML = quizEx;
+<span class="token comment">//문제 출력</span>
+question<span class="token punctuation">.</span>innerText <span class="token operator">=</span> quizAsk<span class="token punctuation">;</span>
 
-정답 숨기기
-questionAnswer.style.display = "none";
-questionEx.style.display = "none";
+<span class="token comment">//정답 출력</span>
+questionAnswer<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> quizAnswer<span class="token punctuation">;</span>
 
-정답 확인
-버튼을 클릭 -> 버튼 숨기기 -> 정답 보여주기
-questionBtn.addEventListener("click",function(){
-questionBtn.style.display = "none";
-questionAnswer.style.display = "block";
-questionEx.style.display = "block";
-});
-</code></pre>
-                        </div>
-                        <div class="jquerySource">
-                            <h3 class="btn btn-primary btn-sm">jquery Source</h3>
-                        </div>
-<pre class="line-numbers language-javascript"><code>jQuery
-문제 정보
-const quizNum = "1";
-const quizAsk = "태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?";
-const quizAnswer = "&lt;a&gt";
-const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+<span class="token comment">//해설 출력</span>
+questionEx<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> quizEx<span class="token punctuation">;</span>
 
-선택자
-const question = $(".question");
-const questionNum = $(".num");
-const questionBtn = $(".confirm-btn");
-const questionAnswer = $(".confirm-answer");
-const questionEx = $(".confirm-ex");
+<span class="token comment">//정답 숨기기</span>
+questionAnswer<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
+questionEx<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
 
-문제 출력
-questionNum.text(quizNum);
-question.text(quizAsk);
-questionAnswer.html(quizAnswer);
-questionEx.html(quizEx);
+<span class="token comment">//정답 확인</span>
+<span class="token comment">//버튼 클릭 -&gt; 버튼 숨기기 -&gt; 정답 보여주기</span>
+questionBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    questionBtn<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
+    questionAnswer<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"block"</span><span class="token punctuation">;</span>
+    questionEx<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"block"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                    </div>
+                    <div class="jquerySource">
+                        <h3 class="btn btn-primary btn-lg">jQuery Source</h3>
+<pre class="line-numbers  language-javascript"><code class=" language-javascript"><span class="token comment">//문제 정보</span>
+<span class="token keyword">const</span> quizNum <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizAsk <span class="token operator">=</span> <span class="token string">"태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizAnswer <span class="token operator">=</span> <span class="token string">"&lt;a&gt;"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> quizEx <span class="token operator">=</span> <span class="token string">"HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."</span><span class="token punctuation">;</span>
 
-정답 숨기기
-questionAnswer.hide();
-questionEx.hide();
+<span class="token comment">//선택자</span>
+<span class="token keyword">const</span> question <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionNum <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".num"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionBtn <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-btn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionAnswer <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> questionEx <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-ex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-정답 확인
-questionBtn.click(function(){
-questionBtn.hide();
-questionAnswer.show();
-questionEx.show();
-})
-</code></pre>
+<span class="token comment">//문제 출력</span>
+questionNum<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>quizNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+question<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>quizAsk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+questionAnswer<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>quizAnswer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+questionEx<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>quizEx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//정답 숨기기</span>
+questionAnswer<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+questionEx<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//정답 확인</span>
+questionBtn<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    questionBtn<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    questionAnswer<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    questionEx<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                    </div>
+
                 </div>
-                <!-- //Intro1 -->
-
-                 <!-- Intro2 -->
-                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">SIDE MENU</h2>
-                    <p class="bs-callout bs-callout-info">toggleClass()를 이용하여 클래스를 추가한 뒤 hasClass()로 클래스 여부를 확인하여 사이드 메뉴를 제작하였습니다. 글씨의 변경은 text() 메서드를 이용했습니다.</p>
+                <!-- //Intro1 -->             
+                
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz2</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
+                    <div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="650" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/giyoung1225/embed/OJXpRbK?height=650&amp;theme-id=light&amp;default-tab=result&amp;user=giyoung1225&amp;slug-hash=OJXpRbK&amp;pen-title=Quiz%20Project1&amp;name=cp_embed_2" style="width: 100%; overflow:hidden; display:block;" title="Quiz Project1" loading="lazy" id="cp_embed_OJXpRbK"></iframe></div>
+                    <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
                 </div>
-                <!-- //Intro2 -->
+                <!-- //Intro2 -->     
+            </div>
             <!-- //col-md-9 -->
-            
-            <!-- //col-md-3 -->
+
+            <!-- col-md-3 -->
             <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
+                <div class="bs-sidebar hidden-print affix-top" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
+                        <li class="active"><a href="#intro1">Quiz1</a></li>
+                        <li><a href="#intro2">Quiz2</a></li>
                     </ul>
                 </div>
             </div>
@@ -201,11 +202,11 @@ questionEx.show();
         <div class="container">
             <ul class="footer-links muted">
                 <li>Currently v2.0</li>
-                <li>&middot;</li>
+                <li>·</li>
                 <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
-                <li>&middot;</li>
+                <li>·</li>
                 <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
-                <li>&middot;</li>
+                <li>·</li>
                 <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
             </ul>
         </div>
@@ -216,6 +217,8 @@ questionEx.show();
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+
+
 </body>
 
 </html>
