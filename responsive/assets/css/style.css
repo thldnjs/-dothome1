@@ -8,7 +8,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
     border-left: 1px solid #dbdbdb;
 }
 #cont_left {float: left; width: 250px;}
-#cont_center {overflow: hidden; min-height: 1200px; margin-right: 250px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
+#cont_center {overflow: hidden; min-height: 1300px; margin-right: 250px; border-right: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb;}
 #cont_right {position: absolute; right: 0; top: 0; width: 250px;}
 #footer {height: 200px; border-top: 1px solid #dbdbdb;}
 
@@ -153,10 +153,10 @@ body {background: url(../img/header_bg.jpg) repeat-x center top; }
 .notice1 li::before {
     content: '';
     width: 3px; height: 3px;
-    background-color: #25a2d0;
+    background-color: #449ce2;
     border-radius: 50%;
     position: absolute;
-    left: 1px; top: 8px;
+    left: 0px; top: 6px;
 }
 
 .notice2 {position: relative; margin-top: 15px;}
