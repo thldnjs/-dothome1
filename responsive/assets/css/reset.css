@@ -23,7 +23,12 @@ body, input, textarea, select, button, table {
 img {width: 100%;}
 
 /* 폰트 스타일 초기화 */
-em {font-style: normal;}
+em , address {font-style: normal;}
+
+/* clearfix */
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {content: ''; display: block; line-height: 0;}
+.clearfix:after {clear: both;} 
 /* IR 효과 */
 .ir_pm {
     display: block; 
@@ -50,3 +55,10 @@ em {font-style: normal;}
     text-indent: -9999px;
 }
 /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
+
+/* float으로 인한 영역 깨짐 방지법 */
+/* 1. 똑같이 float을 사용한다.
+2. 꺠지는 영역에 clear:both를 사용한다.
+3. 상위 영역에 overflow: hidden을 사용한다.
+4. 가상의 영역을 만들어서 사용한다. */
