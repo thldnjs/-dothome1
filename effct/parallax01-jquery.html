@@ -518,7 +518,10 @@
             const scrollTop = $(window).scrollTop() + $(window).height()/2;
             $(".scrollTop").text(parseInt(scrollTop));
             $(".content-item").each(function(num){
+                //출력
                 $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) );
+
+                //출력 글씨 색, 나타나기
                 if( scrollTop > $(this).offset().top ){
                     $(".s"+(num+1)+"OffsetTop").css("color","red");
                     $(this).addClass("show");
