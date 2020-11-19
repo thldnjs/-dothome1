@@ -78,7 +78,7 @@
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
+            <div class="col-md-12" role="main">
                 <!-- 배너 광고 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
@@ -90,109 +90,240 @@
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">Quiz1</h2>
-                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
-                    <div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="650" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/giyoung1225/embed/OJXpRbK?height=650&amp;theme-id=light&amp;default-tab=result&amp;user=giyoung1225&amp;slug-hash=OJXpRbK&amp;pen-title=Quiz%20Project1&amp;name=cp_embed_1" style="width: 100%; overflow:hidden; display:block;" title="Quiz Project1" loading="lazy" id="cp_embed_OJXpRbK"></iframe></div>
-                    <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
-                    
-                    <div class="javascriptSource">
-                        <h3 class="btn btn-primary btn-lg">javascript Source</h3>
-<pre class="line-numbers  language-javascript"><code class=" language-javascript"><span class="token comment">//문제 정보</span>
-<span class="token keyword">const</span> quizNum <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizAsk <span class="token operator">=</span> <span class="token string">"태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizAnswer <span class="token operator">=</span> <span class="token string">"&lt;a&gt;"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizEx <span class="token operator">=</span> <span class="token string">"HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."</span><span class="token punctuation">;</span>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(제이쿼리)</p>
+                    <iframe width="100%" height="560px" src="quizEffect01-jquery.html" frameborder="0"></iframe>
+<pre class="line-numbers language-css"><code>//선택자
+const questionAsk = $(".question")
+const questionNum = $(".num")
+const questionBtn = $(".confirm-btn")
+const questionAnswer = $(".confirm-answer")
+const questionEx = $(".confirm-ex")
 
-<span class="token comment">//선택자</span>
-<span class="token keyword">const</span> question <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> question <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionNum <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".num"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionBtn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-btn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionAnswer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionEx <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">".confirm-ex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+//문제 정보
+const quizNum = 1;
+const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?"
+const quiznAnswer = "&lt;a&gt;"
+const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록구조를 감쌀 수 있는 태그이다."
 
-<span class="token comment">//문제 번호 출력</span>
-questionNum<span class="token punctuation">.</span>innerText <span class="token operator">=</span> quizNum<span class="token punctuation">;</span>
+//문제 출력
 
-<span class="token comment">//문제 출력</span>
-question<span class="token punctuation">.</span>innerText <span class="token operator">=</span> quizAsk<span class="token punctuation">;</span>
+questionNum.text(quizNum);
+questionAsk.text(quizAsk);
+questionAnswer.text(quiznAnswer);
+questionEx.text(quizEx);
 
-<span class="token comment">//정답 출력</span>
-questionAnswer<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> quizAnswer<span class="token punctuation">;</span>
+//문제 숨기기
+questionAnswer.hide(quiznAnswer);
+questionEx.hide(quizEx);
 
-<span class="token comment">//해설 출력</span>
-questionEx<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> quizEx<span class="token punctuation">;</span>
+//정답 확인
+//버튼을 누르면 버튼은 사라지고 정답과 해설은 나타나게
 
-<span class="token comment">//정답 숨기기</span>
-questionAnswer<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
-questionEx<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
-
-<span class="token comment">//정답 확인</span>
-<span class="token comment">//버튼 클릭 -&gt; 버튼 숨기기 -&gt; 정답 보여주기</span>
-questionBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    questionBtn<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"none"</span><span class="token punctuation">;</span>
-    questionAnswer<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"block"</span><span class="token punctuation">;</span>
-    questionEx<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">"block"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-                    </div>
-                    <div class="jquerySource">
-                        <h3 class="btn btn-primary btn-lg">jQuery Source</h3>
-<pre class="line-numbers  language-javascript"><code class=" language-javascript"><span class="token comment">//문제 정보</span>
-<span class="token keyword">const</span> quizNum <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizAsk <span class="token operator">=</span> <span class="token string">"태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizAnswer <span class="token operator">=</span> <span class="token string">"&lt;a&gt;"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> quizEx <span class="token operator">=</span> <span class="token string">"HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다."</span><span class="token punctuation">;</span>
-
-<span class="token comment">//선택자</span>
-<span class="token keyword">const</span> question <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".question"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionNum <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".num"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionBtn <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-btn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionAnswer <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> questionEx <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".confirm-ex"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">//문제 출력</span>
-questionNum<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>quizNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-question<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span>quizAsk<span class="token punctuation">)</span><span class="token punctuation">;</span>
-questionAnswer<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>quizAnswer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-questionEx<span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span>quizEx<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">//정답 숨기기</span>
-questionAnswer<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-questionEx<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">//정답 확인</span>
-questionBtn<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    questionBtn<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    questionAnswer<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    questionEx<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-                    </div>
-
+questionBtn.click(function(){
+    questionBtn.hide();
+    questionAnswer.show();
+    questionEx.show();
+});
+</code></pre>
                 </div>
                 <!-- //Intro1 -->             
                 
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Quiz2</h2>
-                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>
-                    <div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="650" width="100%" name="cp_embed_2" scrolling="no" src="https://codepen.io/giyoung1225/embed/OJXpRbK?height=650&amp;theme-id=light&amp;default-tab=result&amp;user=giyoung1225&amp;slug-hash=OJXpRbK&amp;pen-title=Quiz%20Project1&amp;name=cp_embed_2" style="width: 100%; overflow:hidden; display:block;" title="Quiz Project1" loading="lazy" id="cp_embed_OJXpRbK"></iframe></div>
-                    <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
-                </div>
-                <!-- //Intro2 -->     
-            </div>
-            <!-- //col-md-9 -->
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트)</p>
+                    <iframe width="100%" height="560px" src="quizEffect01-javascript.html" frameborder="0"></iframe>
+<pre class="line-numbers language-css"><code>//선택자
+const questionAsk = document.querySelector(".question");
+const questionNum = document.querySelector(".num");
+const questionBtn = document.querySelector(".confirm-btn");
+const questionAnswer = document.querySelector(".confirm-answer");
+const questionEx = document.querySelector(".confirm-ex");
 
-            <!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print affix-top" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li class="active"><a href="#intro1">Quiz1</a></li>
-                        <li><a href="#intro2">Quiz2</a></li>
-                    </ul>
+//문제 정보
+const quizNum = 1;
+const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?"
+const quiznAnswer = "&lt;a&gt;"
+const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록구조를 감쌀 수 있는 태그이다."
+
+//문제 출력
+questionNum.innerHTML = quizNum;
+questionAsk.innerHTML = quizAsk;
+questionAnswer.innerHTML = quiznAnswer;
+questionEx.innerHTML = quizEx;
+
+//문제 숨기기
+questionAnswer.style.display= "none";
+questionEx.style.display= "none";
+
+//정답확인
+questionBtn.addEventListener("click",function(){
+    questionBtn.style.display = "none";
+    questionAnswer.style.display = "block";
+    questionEx.style.display = "block";
+});
+</code></pre>
                 </div>
+                <!-- //Intro2 -->  
+                
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz3</h2>
+                    <p class="bs-callout bs-callout-info">주관식 3문제 스타일(자바스크립트)</p>
+                    <iframe width="100%" height="1000px" src="quizEffect02-javascript.html" frameborder="0"></iframe>
+<pre class="line-numbers language-css"><code>//선택자
+const questionQuiz = document.querySelectorAll(".quiz")
+const questionAsk = document.querySelectorAll(".question")
+const questionNum = document.querySelectorAll(".num")
+const questionBtn = document.querySelectorAll(".confirm-btn")
+const questionBottom = document.querySelectorAll(".confirm-bottom")
+const questionAnswer = document.querySelectorAll(".confirm-answer")
+const questionEx = document.querySelectorAll(".confirm-ex")
+
+// //문제 정보
+// const quizNum = 1;
+// const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?"
+// const quiznAnswer = "&lt;a&gt;"
+// const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록구조를 감쌀 수 있는 태그이다."
+
+//문제 정보
+const quizInfo = [{
+    quizNum : 1,
+    quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+    quiznAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+
+},{
+    quizNum : 2,
+    quizAsk : "position: relative는 언제 사용하나요?",
+    quiznAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+},{
+    quizNum : 3,
+    quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+    quizAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+}];
+
+// for(let i=0; i<=quizInfo.length; i++){
+//     questionNum[i].innerHTML = quizInfo[i].quizNum;
+//     questionAsk[i].innerHTML = quizInfo[i].quizAsk;
+//     questionAnswer[i].innerHTML = quizInfo[i].quiznAnswer;
+//     questionEx[i].innerHTML = quizInfo[i].quizEx;
+// }
+
+//정답 숨기기
+for(let i=0; i<quizInfo.length; i++){
+    // questionAnswer[i].style.display = "none";
+    // questionEx[i].style.display = "none";
+    // questionEx[i].style.display = "none";
+    // questionEx[i].style.display = "none";
+    questionBottom[i].style.display = "none";
+}
+
+//forEach
+questionQuiz.forEach(function(){});
+questionQuiz.forEach((elem, index)=>{
+    questionNum[index].innerHTML = quizInfo[index].quizNum;
+    questionAsk[index].innerHTML = quizInfo[index].quizAsk;
+    questionAnswer[index].innerHTML = quizInfo[index].quiznAnswer;
+    questionEx[index].innerHTML = quizInfo[index].quizEx;       
+});
+
+//정답 확인
+questionBtn.forEach(elem => {
+    elem.addEventListener("click", function(){
+        this.style.display = "none";
+        this.nextElementSibling.style.display = "block";
+    });
+});
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz4</h2>
+                    <p class="bs-callout bs-callout-info">주관식 3문제 스타일(제이쿼리)</p>
+                    <iframe width="100%" height="1000px" src="quizEffect02-jQuery.html" frameborder="0"></iframe>
+<pre class="line-numbers language-css"><code> //선택자
+const questionAsk = $(".question")
+const questionNum = $(".num")
+const questionBtn = $(".confirm-btn")
+const questionAnswer = $(".confirm-answer")
+const questionEx = $(".confirm-ex")
+
+// //문제 정보
+// const quizNum = 1;
+// const quizAsk = "태그 중에서 유일하게 블록구조를 감쌀 수 있는 태그는?"
+// const quiznAnswer = "&lt;a&gt;"
+// const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록구조를 감쌀 수 있는 태그이다."
+
+//문제 정보
+const quizInfo = [{
+    quizNum : 1,
+    quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+    quiznAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+
+},{
+    quizNum : 2,
+    quizAsk : "position: relative는 언제 사용하나요?",
+    quiznAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+},{
+    quizNum : 3,
+    quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+    quizAnswer: "color 속성",
+    quizEx: "글씨 속성은 color 값을 이용합니다."
+}]
+
+//문제 출력하기
+// questionAsk.eq(0).html(quizInfo[0].quizAsk);
+// questionAsk.eq(1).html(quizInfo[1].quizAsk);
+// questionAsk.eq(2).html(quizInfo[2].quizAsk);
+
+// questionNum.eq(1).html(quizInfo[1].quizNum);
+// questionNum.eq(2).html(quizInfo[2].quizNum);
+// questionNum.eq(3).html(quizInfo[3].quizNum);
+
+// questionAnswer.eq(1).html(quizInfo[1].quiznAnswer);
+// questionAnswer.eq(2).html(quizInfo[2].quiznAnswer);
+// questionAnswer.eq(3).html(quizInfo[3].quiznAnswer);
+
+// questionEx.eq(1).html(quizInfo[1].quizEx);
+// questionEx.eq(2).html(quizInfo[2].quizEx);
+// questionEx.eq(3).html(quizInfo[3].quizEx);
+
+// for(let i=0; i<=2; i++){
+//     questionAsk.eq(i).html(quizInfo[i].quizAsk);
+//     questionNum.eq(i).html(quizInfo[i].quizNum);
+//     questionAnswer.eq(i).html(quizInfo[i].quiznAnswer);
+//     questionEx.eq(i).html(quizInfo[i].quizEx);
+// }
+
+//each()
+$(".quiz-wrap .quiz").each(function(i){
+    $(this).find(questionNum).html(quizInfo[i].quizNum);
+    $(this).find(questionAsk).html(quizInfo[i].quizAsk);
+    $(this).find(questionAnswer).html(quizInfo[i].quizAnswer);
+    $(this).find(questionEx).html(quizInfo[i].quizEx);
+});
+
+//정답 숨기기
+questionAnswer.hide();
+questionEx.hide();
+
+//정답 확인
+questionBtn.click(function(){
+    $(this).hide();
+    $(this).nextAll().show();
+});
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
             </div>
-            <!--//col-md-3 -->
+            <!-- //col-md-12 -->
         </div>
         <!-- //row -->
     </div>
