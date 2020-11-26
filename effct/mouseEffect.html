@@ -251,6 +251,73 @@ follower.classList.remove("active");
 </code></pre> 
 </div>
 <!-- //Intro2 -->
+<!-- Intro3 -->
+<div class="bs-docs-section">
+    <h2 id="intro3" class="page-header">Mouse Effect03</h2>
+    <p class="bs-callout bs-callout-info">GSAP를 이용한 마우스 효과입니다.</p>
+    <iframe width="100%" height="620px" src="mouseEffect03-jquery.html" frameborder="0"></iframe>
+<h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>//움직임 효과
+$(window).mousemove(function(e){
+    gsap.to(".cursor", {duration: 0.4, left: e.pageX, top: e.pageY});
+});
+
+//오버 효과
+$(".contents em").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active");
+});
+
+//출력용
+$(".info.bottom li").click(function(){
+    //클릭한 글씨 값을 가져와서 alert으로 출력
+    const text = $(this).text();
+    //클릭한 글씨를 커서에 클래스로 추가
+    $(".info.bottom li").removeClass("active");
+    $(this).addClass("active");
+    $(".cursor").css("mix-blend-mod", text);
+});
+
+//제목태그에 오버효과
+    $(".left").hover(function(){
+    $(".cursor").addClass("active").css({background: "red"});
+}, function(){
+    $(".cursor").removeClass("active").css({});
+});
+</code></pre> 
+<h3>Javascript</h3>
+<pre class="line-numbers language-js"><code>//움직임 효과
+document.addEventListener("mousemove", function(e){
+    gsap.to(cursor, {duration: 0.3, left: e.pageX, top: e.pageY});
+});
+
+//오버 효과
+contentEm.forEach(elem => {
+    elem.addEventListener("mouseenter", () => {
+        cursor.classList.add("active");
+    });
+    elem.addEventListener("mouseleave", () => {
+        cursor.classList.remove("active");
+    });
+});
+
+//출력용
+infoLi.forEach(info => {
+    info.addEventListener("click", function(){
+        const text = this.textContent || this.innerHTML;
+        cursor.style.mixBlendMode = text;
+
+        infoLi.forEach(li => {
+            li.classList.remove("active");
+            this.classList.add("active");
+        })
+    });
+});
+
+</code></pre> 
+</div>
+<!-- //Intro2 -->
             <!-- //col-md-12 -->
         </div>
         <!-- //row -->

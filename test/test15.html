@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test15</title>
+    <style>
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+        ul, li {list-style: none;}
+        a {text-decoration: none;}
+
+        /* 전체영역 */
+        #wrap {font-family: 'NanumSquare', sans-serif !important; text-align: center;}
+        #header {height: 80px; background-color: #fff;}
+        #banner {height: 650px; background:url(../test/img/bg_cst.png); background-size: cover;}
+        #content {height: 3000px; background-color: #fff;}
+        footer {height: 220px; background-color: #fff;
+        }
+
+        /* container */
+        .container {width: 1300px; height: inherit; margin: 0 auto; background-color: rgba(255, 255, 255, 0);}
+
+        /* 헤더 */
+        .header {position: relative; text-align: center;}
+        .logo {
+            background: url(../test/img/sp_svg_icon.png); 
+            background-position: -4px -61px;
+            width: 150px; height: 31px;
+            position: absolute; left: 3%; top: 27px;
+        }
+        .menu li {display: inline-block; padding: 30px;}
+        .menu li a {color: #828282; font-size: 16px; font-weight: bold;}
+        .right_menu {position: absolute; right: 3%; top: 28px;}
+        .right_menu li {
+            display: inline; border: 2px solid #828282; 
+            border-radius: 5px; padding: 5px 10px;
+            margin-left: 5px;
+        }
+        .right_menu li a {color: #828282; font-size: 12px;}
+
+        /* 컨텐츠 */
+        .contents {width: 1360px;}
+        .contents .text1 {text-align: center;}
+        .contents .text1 {font-size: 40px; margin: 123px 0 24px;
+        font-size: 41px;
+        font-weight: 300;
+        line-height: 56px;
+        letter-spacing: -.2px;
+        color: #2c2c2c;
+        }
+        .contents .text1 strong {color: #01BE75; }
+        .contents > .container {}
+        .contents .partner_link {display: inline-block;
+        width: 200px;
+        padding: 21px 0 17px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 4px;
+        background: #05d686;}
+        .contents ul {}
+        .contents ul li {}
+        .contents .partner_area {
+        width: 1200px;
+        padding: 40px 40px 111px;
+        margin: 46px auto 0;
+        background: #fff;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        .contents .partner_area li .partner_list {overflow: hidden;
+        font-size: 0;
+        border: 1px solid #ebecef;
+        }
+        
+        .contents .partner_area .item {position: relative;
+        display: inline-block;
+        width: 19%;
+        height: 190px;
+        vertical-align: top;
+        border: 1px solid #ebecef;
+        border-width: 1px;
+        content: '';
+        margin: -2.5px;
+        }
+        .partner .partner_list .item .partner_img {
+            vertical-align: middle;
+        }
+        .contents .partner_area .item::before {
+            border-right: 1px solid #ebecef;
+        }
+        .contents .partner_area li li {}
+
+        /* 푸터 */
+        .footer {position: relative; color: #666666; background-color: #191919;}
+        .footer .container {overflow: hidden;}
+        .footer .container .logo2::before {
+            content: ''; background: url(img/sp_svg_icon.png) no-repeat; 
+            width: 150px; height: 30px; position: absolute; background-position: 0px 0px;
+            top: 30px; left: 460px;
+        }
+        .footer .container .icon_box {position: absolute; top: 25px; right: 355px; overflow: hidden;}
+        .footer .container .icon {background: url(../test/img/sp_svg_icon.png); width: 21px; height: 21px; margin-left: 30px; margin-top: 18px;}
+        .footer .container .blog {float: left; background-position: -200px -120px;}
+        .footer .container .face {float: left; background-position: -164px -218px;}
+        .footer .container .insta {float: left; background-position: -138px -218px;}
+        .footer .container .you {float: left; background-position: -200px -172px;}
+        .footer .container .bottom1 {overflow: hidden; display: inline-block; position: relative;}
+        .footer .container .bottom1 li {float: left; margin-top: 70px; font-size: 13px; margin-left: 7px;}
+        .footer .container .bottom1 li:first-child {margin-left: 0;}
+        .footer .container .bottom1 li::before{content: ''; width: 1px; height: 15px; position: absolute; top: 71px; left: 120px; background: #666666;}
+        .footer .container .bottom2 {display: inline-block; margin-left: 20%;}
+        .footer .container .bottom2 li {font-size: 13px;}
+        .footer .container .bottom3 {overflow: hidden; float: right;}
+        .footer .container .bottom3 li {float: left; margin-top: 70px; font-size: 13px; margin-right: 7px; position: relative;}
+        .footer .container .bottom3 li::before{content: ''; width: 1px; height: 15px; position: absolute; top: 2px; left: -4px; background: #666666;}
+        .footer .container .bottom3 li:last-child {margin-right: 0;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"><a href="#"></a></h1>
+                    <ul class="menu">
+                        <li><a href="#">기술 · 솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <ul class="right_menu">
+                        <li><a href="#">Biz Start</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            </header>
+            <div id="contents">
+                <div class="container">
+                    <div class="contents">
+                        <div class="text1">
+                            <strong>클로바</strong>
+                            는 다양한 브랜드,
+                            <br>
+                            서비스 및 개발사들과 함께 하겠습니다.
+
+                        </div>
+                        <a href="#" target="_blank" class="partner_link">제휴 제안 신청</a>
+                        <div class="partner_area">
+                            <ul class="partner_list">
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/dy_media.png"
+                                            width="194" height="194" alt="동영미디어" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_1.png"
+                                            width="194" height="194" alt="문학동네" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank"
+                                        class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_2.png"
+                                            width="194" height="194" alt="우리은행" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_3.png"
+                                            width="194" height="194" alt="팟빵" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_4.png"
+                                            width="194" height="194" alt="BBS 불교방송" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_5.png"
+                                            width="194" height="194" alt="BRUNT" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_6.png"
+                                            width="194" height="194" alt="BUGS" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_7.png"
+                                            width="194" height="194" alt="CHERISH" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_8.png"
+                                            width="194" height="194" alt="COWAY" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_9.png"
+                                            width="194" height="194" alt="GENIE MUSIC" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_10.png"
+                                            width="194" height="194" alt="GOOD TV" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_11.png"
+                                            width="194" height="194" alt="HK 네트웍스" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_12.png"
+                                            width="194" height="194" alt="Hue" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/infomark.png"
+                                            width="194" height="194" alt="인포마크" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/iscream_edu.png"
+                                            width="194" height="194" alt="아이스크림에듀" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_13.png"
+                                            width="194" height="194" alt="iWAY" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#"
+                                        target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_14.png"
+                                            width="194" height="194" alt="LG U plus" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank"
+                                        class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_15.png"
+                                            width="194" height="194" alt="LG전자" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_16.png"
+                                            width="194" height="194" alt="LINE FRIENDS" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/markt.png"
+                                            width="194" height="194" alt="마크티" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/minibig.png"
+                                            width="194" height="194" alt="미니빅" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_17.png"
+                                            width="194" height="194" alt="미래에셋 대우" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_18.png"
+                                            width="194" height="194" alt="NAVER LABS" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_19.png"
+                                            width="194" height="194" alt="NAVER MUSIC" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_20.png"
+                                            width="194" height="194" alt="NE 능률" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_30.jpg"
+                                            width="194" height="194" alt="NOW." class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank"
+                                        class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_31.png"
+                                            width="194" height="194" alt="Qihoo" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_21.png"
+                                            width="194" height="194" alt="QUALCOMM" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_22.png"
+                                            width="194" height="194" alt="sports2i" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_23.png"
+                                            width="194" height="194" alt="tbs" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_32.png"
+                                            width="194" height="194" alt="THINKWARE" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_33.png"
+                                            width="194" height="194" alt="UBTECH" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_24.png"
+                                            width="194" height="194" alt="vibe" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_25.png"
+                                            width="194" height="194" alt="Xiaomi" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_26.png"
+                                            width="194" height="194" alt="yeelight" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#"
+                                        target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_27.png"
+                                            width="194" height="194" alt="YG Entertainment" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_28.png"
+                                            width="194" height="194" alt="youmi" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#" target="_blank" class="link">
+                                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_29.png"
+                                            width="194" height="194" alt="YTN" class="partner_img">
+                                    </a>
+                                </li>
+                                <li class="item"><span class="partner_img blank"></span></li>
+                                <li class="item"><span class="partner_img blank"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footer">
+                    <div class="container">
+                        <div class="logo2"></div>
+                        <div class="icon_box">
+                        <ul>
+                            <li class="icon blog"></li>
+                            <li class="icon face"></li>
+                            <li class="icon insta"></li>
+                            <li class="icon you"></li>
+                        </ul>
+                    </div>
+                    <ul class="bottom1">
+                        <li>고객센터 1833-5387</li>
+                        <li>09:00-18:00(주말, 공휴일 휴무)</li>
+                    </ul>
+                    <ul class="bottom2">
+                        <li>Powered by <strong>NAVER · LINE</strong></li>
+                    </ul>
+                    <ul class="bottom3">
+                        <li>공지사항</li>
+                        <li>이용약관</li>
+                        <li>CLOVA 채용안내</li>
+                        <li>CLOVA JP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+</html>

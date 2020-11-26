@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax02- javascript</title>
+    <title>parallax04- javascript</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     <style>
         /* reset */
@@ -145,7 +145,6 @@
             padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
             position: relative;
             overflow: hidden;
-            background: red;
         }
         
         .content-item-img {
@@ -213,6 +212,25 @@
             padding-right: 10vw;
         }
 
+        /* 한글자씩 나타나기*/
+        .content-item-desc {
+            padding-left: 10vw;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            padding-left: 0vw; padding-right: 10vw;
+        }
+        .content-item-desc span {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.77s cubic-bezier(0, 0.48, 0, 1.04);
+            display: inline-block;
+            min-width: 20px;
+        }
+        .content-item-desc span.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         /* position: relative;
         1. position: absolute 기준점 역할 
         2. position: absolute를 사용하지 않고 z-index를 사용할 경우
@@ -231,15 +249,15 @@
 <body>
 
     <div class="info left">
-        <h1>Parallax Effect02 - javascript</h1>
-        <p>패럴랙스 스크로링 효과 - 이질감 느끼기</p>
+        <h1>Parallax Effect04 - javascript</h1>
+        <p>패럴랙스 스크로링 효과 - 이미지 기울이기</p>
     </div>
     <div class="info right">
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html" class="active">2</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html" >2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html" class="active">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
             <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
@@ -335,47 +353,106 @@
     </main>
 
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
+    //     let text = document.querySelector("#section1 .content-item-desc");
+    //     let splitText = text.innerText;
+    //     let splitWrap = splitText.split("").join("</span><span aria-hidden: 'true'>");  
+    //         splitWrap = "<span aria-hidden: 'true'>" + splitWrap + "</span>";
+        
+    //    text.innerHTML = splitWrap;
+    //    //$(this).html(split).attr("aria-label", text);
+    //    text.setAttribute("aria-label", splitText);
+
+       //글씨 쪼개기(한번에, forEach)
+       document.querySelectorAll(".content-item-desc").forEach(elem => {
+            let splitText = elem.innerText;
+            let splitWrap = splitText.split("").join("</span><span aria-hidden: 'true'>");  
+                splitWrap = "<span aria-hidden: 'true'>" + splitWrap + "</span>";
+            
+            elem.innerHTML = splitWrap;
+            elem.setAttribute("aria-label", splitText);
+       });
+
+       //한글자씩 나오기
+        // if($(window).scrollTop() > $("#section1").offset().top) {
+            //     $("#section1 .content-item-desc span").each(function(i){
+            //         setTimeout(() => {
+            //             $("#section1 .content-item-desc span").eq(i).addClass("show");
+            //         }, 50 * (i+1));
+            //     });
+            // }
+
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;
-            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
-            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
-            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
-            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
-            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
-            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
-            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
-            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
-
-            // document.querySelector("#section1 .content-item-desc").style.transform = "translateY("+ -offset1 +"px)"
-            // document.querySelector("#section2 .content-item-desc").style.transform = "translateY("+ -offset2 +"px)"
-            // document.querySelector("#section3 .content-item-desc").style.transform = "translateY("+ -offset3 +"px)"
-            // document.querySelector("#section4 .content-item-desc").style.transform = "translateY("+ -offset4 +"px)"
-            // document.querySelector("#section5 .content-item-desc").style.transform = "translateY("+ -offset5 +"px)"
-            // document.querySelector("#section6 .content-item-desc").style.transform = "translateY("+ -offset6 +"px)"
-            // document.querySelector("#section7 .content-item-desc").style.transform = "translateY("+ -offset7 +"px)"
-            // document.querySelector("#section8 .content-item-desc").style.transform = "translateY("+ -offset8 +"px)"
-            // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)"
-
-            //for문으로 쓰기
-            // for(let i=1; i<=9; i++){
-            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
-            //     document.querySelector("#section"+i+ " .content-item-desc").style.transform = "translateY("+ -offset +"px)"
-            //}
-
-            //for each문으로 쓰기
-            document.querySelectorAll(".content-item").forEach((elem) => {
-                let target= elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop) * 0.2;
-                target.style.transform = "translateY("+ -offset + "px)"
-                document.querySelector(".scrollTop").innerText=pageXOffset;
+            if(pageYOffset > document.getElementById("section1").offsetTop){
+                document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section2").offsetTop){
+                document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section3").offsetTop){
+                document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section4").offsetTop){
+                document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section5").offsetTop){
+                document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section6").offsetTop){
+                document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section7").offsetTop){
+                document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section8").offsetTop){
+                document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
+            if(pageYOffset > document.getElementById("section9").offsetTop){
+                document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) => {
+                    setTimeout(() => {
+                        elem.classList.add("show");
+                    }, 50 *(index +1)); //시간이 지날 수록 딜레이 효과를 준다.
+                });
+            }
         });
-        
-    });
 
-    
+
+        // alert(splitText);
     </script>
 </body>
 </html>

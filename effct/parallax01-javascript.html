@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,41 +14,56 @@
             font-weight: normal;
             font-style: normal;
         }
-        * , *::before , *::after {
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
         }
 
         a {
-            text-decoration: none; 
+            text-decoration: none;
             transition: all 0.2s;
-            }
+        }
 
         img {
             width: 100%;
-            vertical-align: top;  /* 여백 초기화 */
+            vertical-align: top;
+            /* 여백 초기화 */
         }
+
         ul {
             list-style: none;
         }
 
         /* info */
         .info {
-            position: fixed; z-index: 1000;
+            position: fixed;
+            z-index: 1000;
         }
+
         .info.left {
-            left: 20px; top: 20px;
+            left: 20px;
+            top: 20px;
         }
+
         .info.right {
-            right: 20px; top: 20px;
+            right: 20px;
+            top: 20px;
         }
+
         .info.bottom {
-            right: 20px; bottom: 20px;
+            right: 20px;
+            bottom: 20px;
         }
+
         .info h1 {
             font-size: 2rem;
             line-height: 1.4;
         }
+
         .info p {
             font-size: 1rem;
         }
@@ -59,13 +75,14 @@
 
         .info li a {
             color: #000;
-            width: 25px; height: 25px;
+            width: 25px;
+            height: 25px;
             border: 1px dashed #000;
             display: inline-block;
             border-radius: 50%;
             text-align: center;
             line-height: 25px;
-            font-size: 0,8rem;
+            font-size: 0, 8rem;
             margin: 5px;
         }
 
@@ -74,33 +91,36 @@
             color: #fff;
         }
 
-        @media (max-width: 800px){
-            .info h1 {display: none;}
+        @media (max-width: 800px) {
+            .info h1 {
+                display: none;
+            }
         }
 
         /*  main  */
         body {
-            --color-h1 : #dc6e25;
-            --color-title : #fff;
-            --color-sub : #999;
-            --color-link : #000;
-            --color-bg : #cecece;
-            --font-cafe : 'Jal_Onuel';
-            --font-lato : 'Lato', sans-serif;
+            --color-h1: #dc6e25;
+            --color-title: #fff;
+            --color-sub: #999;
+            --color-link: #000;
+            --color-bg: #222;
+            --font-cafe: 'Jal_Onuel';
+            --font-lato: 'Lato', sans-serif;
 
             background-color: var(--color-bg);
             color: var(--color-title);
-            font-family: var( --font-cafe);
+            font-family: var(--font-cafe);
         }
 
         #parallax-wrap h1 {
-            color: var( --color-h1);
+            color: var(--color-h1);
             font-family: var(--font-lato);
             font-size: 8vw;
             font-weight: 900;
             text-transform: uppercase;
             padding: 10vw 8vw 0 8vw;
         }
+
         #parallax-wrap h1 em {
             display: block;
             font-weight: 100;
@@ -118,6 +138,7 @@
             margin: 60vh 0 60vh;
             position: relative;
         }
+
         .content-item:nth-child(even) {
             margin-left: auto;
         }
@@ -142,7 +163,7 @@
             padding-bottom: 50%;
             position: relative;
         }
-        
+
         .content-item-img {
             width: 100%;
             position: absolute;
@@ -151,42 +172,52 @@
             left: 0;
             top: 0;
         }
+
         .content-item:nth-child(1) .content-item-img {
             background: url(img/images01.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(2) .content-item-img {
             background: url(img/images02.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(3) .content-item-img {
             background: url(img/images03.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(4) .content-item-img {
             background: url(img/images04.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(5) .content-item-img {
             background: url(img/images05.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(6) .content-item-img {
             background: url(img/images06.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(7) .content-item-img {
             background: url(img/images07.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(8) .content-item-img {
             background: url(img/images08.jpg);
             background-size: cover;
         }
+
         .content-item:nth-child(9) .content-item-img {
             background: url(img/images09.jpg);
             background-size: cover;
         }
+
         .content-item-desc {
             font-size: 5vw;
             line-height: 1.4;
@@ -233,7 +264,7 @@
         } */
 
         /* 개별적으로 나타나기 */
-        /* .contents > section .content-item-num {
+        .contents > section .content-item-num {
             opacity: 0;
             transform: translateY(200px);
             transition: all 1s 0.1s cubic-bezier(0.02, 0.54, 0.46, 0.99);
@@ -270,10 +301,10 @@
         .contents > section.show .content-item-desc {
             opacity: 1;
             transform: translateY(0);
-        } */
-        
+        }
     </style>
 </head>
+
 <body>
 
     <div class="info left">
@@ -400,68 +431,137 @@
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        window.addEventListener("scroll",function(){
-            let pageYOffset = window.pageYOffset
+        window.addEventListener("scroll", function () {
+            let pageYOffset = window.pageYOffset + screen.height /2;
 
             //출력용
             document.querySelector(".pageYOffset").innerText = parseInt(pageYOffset);
-            document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-            document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-            document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-            document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-            document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-            document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-            document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-            document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-            document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+            // document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+            // document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+            // document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+            // document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+            // document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+            // document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+            // document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+            // document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+            // document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
             //출력용 글씨 색
-            if(pageYOffset > document.getElementById("section1").offsetTop) {
+            if (pageYOffset > document.getElementById("section1").offsetTop) {
                 document.querySelector(".s1OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s1OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section2").offsetTop) {
+            if (pageYOffset > document.getElementById("section2").offsetTop) {
                 document.querySelector(".s2OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s2OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section3").offsetTop) {
+            if (pageYOffset > document.getElementById("section3").offsetTop) {
                 document.querySelector(".s3OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s3OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section4").offsetTop) {
+            if (pageYOffset > document.getElementById("section4").offsetTop) {
                 document.querySelector(".s4OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s4OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section5").offsetTop) {
+            if (pageYOffset > document.getElementById("section5").offsetTop) {
                 document.querySelector(".s5OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s5OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section6").offsetTop) {
+            if (pageYOffset > document.getElementById("section6").offsetTop) {
                 document.querySelector(".s6OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s6OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section7").offsetTop) {
+            if (pageYOffset > document.getElementById("section7").offsetTop) {
                 document.querySelector(".s7OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s7OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section8").offsetTop) {
+            if (pageYOffset > document.getElementById("section8").offsetTop) {
                 document.querySelector(".s8OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s8OffsetTop").style.color = "white"
             }
-            if(pageYOffset > document.getElementById("section9").offsetTop) {
+            if (pageYOffset > document.getElementById("section9").offsetTop) {
                 document.querySelector(".s9OffsetTop").style.color = "red"
             } else {
                 document.querySelector(".s9OffsetTop").style.color = "white"
             }
+
+            //한번에(for)
+
+            for (let i = 1; i <= 9; i++) {
+                document.querySelector(".s" + i + "OffsetTop").innerText = document.getElementById("section" +
+                    i).offsetTop;
+                if (pageYOffset > document.getElementById("section" + i).offsetTop) {
+                    document.querySelector(".s" + i + "OffsetTop").style.color = "red"
+                } else {
+                    document.querySelector(".s" + i + "OffsetTop").style.color = "white"
+                }
+            }
+
+            // //나타나기
+            // if(pageYOffset > document.getElementById("section1").offsetTop){
+            //     document.getElementById("section1").classList.add("show")
+            // } else {
+            //     document.getElementById("section1").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section2").offsetTop){
+            //     document.getElementById("section2").classList.add("show")
+            // } else {
+            //     document.getElementById("section2").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section3").offsetTop){
+            //     document.getElementById("section3").classList.add("show")
+            // } else {
+            //     document.getElementById("section3").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section4").offsetTop){
+            //     document.getElementById("section4").classList.add("show")
+            // } else {
+            //     document.getElementById("section4").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section5").offsetTop){
+            //     document.getElementById("section5").classList.add("show")
+            // } else {
+            //     document.getElementById("section5").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section6").offsetTop){
+            //     document.getElementById("section6").classList.add("show")
+            // } else {
+            //     document.getElementById("section6").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section7").offsetTop){
+            //     document.getElementById("section7").classList.add("show")
+            // } else {
+            //     document.getElementById("section7").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section8").offsetTop){
+            //     document.getElementById("section8").classList.add("show")
+            // } else {
+            //     document.getElementById("section8").classList.remove("show")
+            // }
+            // if(pageYOffset > document.getElementById("section9").offsetTop){
+            //     document.getElementById("section9").classList.add("show")
+            // } else {
+            //     document.getElementById("section9").classList.remove("show")
+            // }
+
+            //나타내기 한번에
+            document.querySelectorAll(".content-item").forEach(elem => {
+                    if(pageYOffset > elem.offsetTop){
+                        elem.classList.add("show");
+                    } else {
+                        elem.classList.remove("show");
+                    }
+            });
         });
-    </script> 
+    </script>
 </body>
+
 </html>

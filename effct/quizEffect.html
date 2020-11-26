@@ -292,6 +292,111 @@ questionBtn.forEach( elem => {
                 </div>
                 <!-- //Intro2 -->
 
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Quiz3</h2>
+                    <p class="bs-callout bs-callout-info">객관식 1문제 스타일</p>
+                    <iframe width="100%" height="700px" src="quizEffect03-jQuery.html" frameborder="0"></iframe>
+<h3>jQeury</h3>
+<pre class="line-numbers language-js"><code>//문제 출력
+function updateQuiz(){
+    questionNum.innerHTML = quizInfo[0].quizNum;
+    questionAsk.innerHTML = quizInfo[0].quizAsk;
+    questionAnswer.innerHTML = quizInfo[0].quizAnswer;
+    questionEx.innerHTML = quizInfo[0].quizEx;
+    //보기 출력
+    for(var i=0; i<4; i++){
+        questionChoice[i].innerHTML = quizInfo[0].quizChoice[i];
+    }
+    //forEach문
+    // questionChoice.forEach(function(elem,index){
+    //     questionChoice[index].innerHTML = quizInfo[0].quizChoice[index];
+    // });
+    //정답 감추기
+    questionAnswer.style.display = "none";
+    questionEx.style.display = "none";
+}
+updateQuiz();
+//정답 확인
+function answerQuiz(){
+    for(let i = 0; i < questionSelect.length; i++){
+        if(questionSelect[i].checked == true){
+            if(questionSelect[i].value == quizInfo[0].quizAnswer){
+                //정답입니다.
+                questionAnswer.innerHTML = "정답입니다.";
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block";
+                questionEx.style.display = "block";
+            } else {
+                //오답입니다.
+                questionAnswer.innerHTML = "틀렸습니다.";
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block";
+                questionEx.style.display = "block";
+            }
+        }
+    }
+}
+questionBtn.addEventListener("click", answerQuiz);
+</code></pre> 
+<h3>Javascript</h3>
+<pre class="line-numbers language-js"><code>//문제 정보
+    const quizInfo = [
+    {
+        quizNum: '1',
+        quizAsk: "다음 중 시멘틱 태그는 무엇인가요?",
+        quizChoice: ["div 태그", "h1 태그", "span 태그", "main 태그"],
+        quizAnswer: "4",
+        quizEx: "시멘틱 태그는 의미가 부여된 태그로서 main 태그는 사이트에서 중요한 컨텐츠에 한번만 사용할 수 있습니다."
+    }
+]
+
+//문제 출력
+function updataQuiz() {
+        questionNum.innerHTML = quizInfo[0].quizNum;
+        questionAsk.innerHTML = quizInfo[0].quizAsk;
+        questionAnswer.innerHTML = quizInfo[0].quizAnswer;
+        questionNum.innerHTML = quizInfo[0].quizNum;
+        questionEx.innerHTML = quizInfo[0].quizEx;
+
+        for(var i=0; i<=4; i++){
+            questionChoice[i].innerHTML = quizInfo[0].quizChoice[i];
+        }
+
+        //정답 감추기
+        questionAnswer.style.display = "none";
+        questionEx.style.display = "none";
+}
+updataQuiz();
+
+//정답 확인
+function answerQuiz(){
+    for (let i=0; i<questionSelect.length; i++){
+        if(questionSelect[i].checked == true){
+            if(questionSelect[i].value == quizInfo[0].quizAnswer) {
+                //정답입니다.
+                //alert("정답입니다.");
+                questionAnswer.innerHTML = "정답입니다";
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block";
+                questionEx.style.display = "block";
+            } else {
+                //오답입니다.
+                //alert("오답입니다.");
+                questionAnswer.innerHTML = "오답입니다";
+                questionBtn.style.display = "none";
+                questionAnswer.style.display = "block";
+                questionEx.style.display = "block";
+            }
+        }
+    }
+}
+questionBtn.addEventListener("click", answerQuiz);
+</code></pre> 
+                </div>
+                <!-- //Intro1 -->
+
+
             </div>
             <!-- //col-md-12 -->
         </div>
