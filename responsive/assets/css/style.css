@@ -223,11 +223,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .notice2 {position: relative; margin-top: 15px;}
 .notice2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
 .notice2 li {
-    position: relative;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+    position: relative; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
     padding-left: 8px;
 }
 .notice2 li::before {
@@ -253,7 +249,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
  .blog2 .img-retina {
      background: url(../img/blog4_@1.jpg) no-repeat center center / center center;
  }
- @media only screen and (-webkit-min-device-pixel-ratio: 2),
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
             only screen and (min-device-pixel-ratio: 2),
             only screen and (min-resolution: 2dppx) {
                 .blog2 .img-retina {background-image: url(../img/blog4_@2.jpg);}
