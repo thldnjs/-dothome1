@@ -247,11 +247,16 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .notice2 {position: relative; margin-top: 15px;}
 .notice2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
 .notice2 li {
+<<<<<<< HEAD
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden; padding-left: 8px;
     position: relative;
+=======
+    position: relative; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+    padding-left: 8px;
+>>>>>>> 2b9e38009a757977586f805d1db5e1ab2c78f0a0
 }
 .notice2 li::before {
     content: '';
@@ -268,6 +273,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 /* blog */
 .blog1 figcaption {margin-top: 5px;}
 
+<<<<<<< HEAD
 .blog2 {margin-top: 15px;}
 .blog2 h5 {
     color: #fff; text-align: center; padding: 30px;
@@ -279,6 +285,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     background-size: cover; */
     background: url(../img/blog4_@1.jpg) no-repeat center center / cover;
 }
+=======
+ /* 블로그2 */
+ .blog2 h5 {color: #fff; text-align: center; padding: 30px 30px; text-transform: uppercase;}
+ .blog2 p {padding-top: 5px;}
+ .blog2 .img-retina {
+     background: url(../img/blog4_@1.jpg) no-repeat center center / center center;
+ }
+>>>>>>> 2b9e38009a757977586f805d1db5e1ab2c78f0a0
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
             only screen and (min-device-pixel-ratio: 2),
             only screen and (min-resolution: 2dppx) {
