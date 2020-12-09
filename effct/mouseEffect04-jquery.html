@@ -1,6 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +40,60 @@
             line-height: 1.5;
             cursor: none;
             position: relative;
+            font-family: 'LotteMartHappy';
+            font-style: normal;
+            font-weight: 400;
+            src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'SDKukdetopokki-Lt';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .lottemarthappy * {
+            font-family: 'LotteMartHappy', sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background: #32363f url(img/images10@2.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+            line-height: 1.5;
+            font-family: 'SDKukdetopokki-Lt';
+            background-blend-mode: overlay;
+            /* cursor: none; */
         }
         body::before {
             content: '';
@@ -109,6 +166,7 @@
             position: absolute; left: 5%; bottom: -20px;
             width: 90%; height: 40px;
             background: url(img/images05.jpg) no-repeat;
+            background: url(img/images08.jpg) no-repeat;
             background-size: 100% 40px;
             filter: blur(15px);
             z-index: -1;
@@ -120,12 +178,17 @@
             bottom: 50%;
             transform: translate3d(-50%, 68%, 150px);
             background: rgba(0,0,0,0.3);
+            background: rgba(0,0,0,0.6);
             padding: 2vw;
             text-align: center;
             border-radius: 2px;
             white-space: nowrap;
         }
+
         .move-image .mtxt p:nth-child(1) {
+=======
+        .move-image .mtxt p:nth-child(1){
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
             font-size: 1rem;
         }
         .cursor {
@@ -141,10 +204,80 @@
         .cursor.active {
             transform: scale(12);
         }
+<<<<<<< HEAD
     </style>
 
 
 </head>
+=======
+
+        /* info */
+        .info {
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .info.left {
+            left: 20px;
+            top: 20px;
+        }
+
+        .info.right {
+            right: 20px;
+            top: 20px;
+        }
+
+        .info.bottom {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .info h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+
+        .info p {
+            font-size: 1rem;
+        }
+
+        .info li {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .info.bottom li .active,
+        .info.bottom li:hover{
+            color: #66c2ce;
+        }
+
+        .info li a {
+            color: #fff;
+            width: 25px;
+            height: 25px;
+            border: 1px dashed #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-size: 0, 8rem;
+            margin: 5px;
+        }
+
+        .info li a.active {
+            background: #fff;
+            color: #000;
+        }
+
+        @media (max-width: 800px) {
+            .info h1 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
 <body>
     <!-- info -->
     <div class="info left">
@@ -154,7 +287,12 @@
     <div class="info right">
         <ul>
             <li><a href="mouseEffect01-jquery.html">1</a><a href="mouseEffect01-javascript.html">1</a></li>
+<<<<<<< HEAD
             <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
+=======
+            <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a>
+            </li>
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
             <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
             <li><a href="mouseEffect04-jquery.html" class="active">4</a><a href="mouseEffect04-javascript.html">4</a></li>
             <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
@@ -164,6 +302,7 @@
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
         </ul>
     </div>
+<<<<<<< HEAD
     <div class="info bottom">
         <ul>
             <li>pageX : <span class="pageX">0</span></li>
@@ -191,6 +330,31 @@
             
     </main>
     
+=======
+
+    <div class="info bottom">
+        <ul>
+           <li>pageX : <span class="pageX">0</span></li>
+           <li>pageY : <span class="pageY">0</span></li>
+           <li>mouseX : <span class="mouseX">0</span></li>
+           <li>mouseY : <span class="mouseY">0</span></li>
+           <li>angleX : <span class="angleX">0</span></li>
+           <li>angleY : <span class="angleY">0</span></li>
+           <li>fmouseX : <span class="fmouseX">0</span></li>
+           <li>fmouseY : <span class="fmouseY">0</span></li>
+        </ul>
+    </div>
+    <!-- info -->
+    <main class="move-image">
+        <div class="cursor"></div>
+        <div class="mimg"><img src="img/images09.jpg" alt="이미지"></div>
+        <div class="mtxt">
+            <p>When was<em> a good day</em> for you</p>
+            <p>당신에게 있어서 <em>괜찮은 하루는</em> 어떤 날이였나요?</p>
+        </div>
+    </main>
+
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
@@ -198,12 +362,17 @@
         let x = 0,
             y = 0,
             mouseX = 0,
+<<<<<<< HEAD
             mouseY = 0,
+=======
+            mouseY = 0;
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
             angleX = 0,
             angleY = 0,
             fmouseX = 0,
             fmouseY = 0;
 
+<<<<<<< HEAD
             $(window).mousemove(function(e){
                 x = e.pageX;
                 y = e.pageY;
@@ -242,4 +411,43 @@
     </script>
     
 </body>
+=======
+        $(window).mousemove(function(e){
+            x = e.pageX;
+            y = e.pageY;
+
+            // mouseX = $(window).width()/2 - x;
+            // mouseY = $(window).height()/2 - y;
+
+            //마우스의 x축 y축 최소값 -50 최댓값 50으로 설정
+            mouseX = Math.max(-50, Math.min($(window).width()/2 - x));
+            mouseY = Math.max(-50, Math.min($(window).height()/2 - y));
+
+            angleX = (12 * mouseX) / 100;
+            angleY = (12 * mouseY) / 100;
+
+            fmouseX += (angleX - fmouseX) * 1/10
+            fmouseY += (angleY - fmouseY) * 1/10
+            //커서
+            gsap.to(".cursor", {duration: 0.3, left: x, top: y});
+
+            //움직임
+            $(".move-image").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+ -fmouseX+"deg)"});
+        });
+
+        //출력용
+        $(window).mousemove(function(e){
+            $(".pageX").text(x);
+            $(".pageY").text(y);
+            $(".mouseX").text(mouseX);
+            $(".mouseY").text(mouseY);
+            $(".angleX").text(angleX);
+            $(".angleY").text(angleY);
+            $(".fmouseX").text(Math.round(fmouseX));
+            $(".fmouseY").text(Math.round(fmouseY));
+        });
+    </script>
+</body>
+
+>>>>>>> b940e6644fde253d7be1c9fee5f8028191ba57d1
 </html>

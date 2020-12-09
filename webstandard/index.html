@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="webstoryboy">
+    <meta name="author" content="hgy5710">
     <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
-    <meta name="keywords" content="웹 표준, 웹접근성, 사이트만들기">
+    <meta name="keywords" content="웹표준, 웹접근성, 사이트만들기">
     <title>Webstandard SITE</title>
 
-    <!-- CSS style -->
+    <!-- CSS Style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="assets/css/slick.css"/>
-    <link rel="stylesheet" href="assets/css/lightgallery.css"/> 
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightgallery.css">
 
     <!-- webfonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
-    
-    <!-- 스킵 네이게이션 -->
+
     <div id="skip">
         <a href="#cont_nav">전체 메뉴 바로가기</a>
         <a href="#cont_ban">배너 메뉴 바로가기</a>
         <a href="#cont_cont">컨텐츠 메뉴 바로가기</a>
     </div>
-    <!-- //스킵 네이게이션 -->
+    <!-- //스킵 내비게이션 -->
 
     <div id="wrap">
         <div id="header">
@@ -36,15 +33,14 @@
                 <div class="header">
                     <div class="header_menu">
                         <a href="#">Designer</a>
-                        <a href="#">Publisher</a>
-                        <a href="#">youtube</a>
+                        <a href="#">Pulihser</a>
+                        <a href="#">Developer</a>
                     </div>
                     <!-- //header_menu -->
                     <div class="header_tit">
                         <h1>Professional Publusher & Designer</h1><br>
-                        <a href="#">Webstoryboy.co.kr</a>
+                        <a href="#">hgy5710.co.kr</a>
                     </div>
-                    <!-- //header_tit -->
                     <div class="header_icon">
                         <!-- a[href="#"].icon$*4>span{icon$} -->
                         <a href="#" class="icon1"><span class="ir_pm">icon1</span></a>
@@ -64,6 +60,7 @@
                     <div class="nav">
                         <div>
                             <h3>HTML Reference</h3>
+                            <!-- ul>li*14>a[href='#'] -->
                             <ul>
                                 <li><a href="#">HTML 태그</a></li>
                                 <li><a href="#">블록요소/인라인요소</a></li>
@@ -72,7 +69,7 @@
                                 <li><a href="#">HTML &lt;title&gt;</a></li>
                                 <li><a href="#">HTML &lt;meta&gt;</a></li>
                                 <li><a href="#">엔티티 코드</a></li>
-                                <li><a href="#">하이퍼링크</a></li>
+                                <li><a href="#">하이퍼 링크</a></li>
                                 <li><a href="#">HTML &lt;style&gt;</a></li>
                                 <li><a href="#">HTML &lt;html&gt;</a></li>
                                 <li><a href="#">HTML &lt;head&gt;</a></li>
@@ -83,6 +80,7 @@
                         </div>
                         <div>
                             <h3>CSS Reference</h3>
+                            <!-- ul>li*14>a[href='#'] -->
                             <ul>
                                 <li><a href="#">CSS 선택자</a></li>
                                 <li><a href="#">CSS 단위</a></li>
@@ -101,7 +99,8 @@
                             </ul>
                         </div>
                         <div class="last">
-                            <h3>Javascript</h3>
+                            <h3>javascript</h3>
+                            <!-- ul>li*14>a[href='#'] -->
                             <ul>
                                 <li><a href="#">변수</a></li>
                                 <li><a href="#">배열</a></li>
@@ -116,45 +115,48 @@
                 </div>
             </div>
             <!-- //cont_nav -->
+
             <div id="cont_tit">
                 <div class="container">
                     <div class="tit">
-                        <h2>"나는 퍼블리셔다!!"</h2>
+                        <h2>"나는 퍼블리셔다"</h2>
                         <a href="#" class="btn"><span class="ir_pm">전체메뉴</span></a>
                     </div>
                 </div>
             </div>
             <!-- //cont_tit -->
+
             <div id="cont_ban">
                 <div class="container">
-                    <div class="ban">
-                        <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
-                        <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
-                        <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
-                        <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
-                        <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
-                        <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
-                        <div><a href="#"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></a></div>
-                        <div><a href="#"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></a></div>
-                        <div><a href="#"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></a></div>
-                    </div>
+                    <!-- <div class="ban">
+                        <a href="#" class="prev"><span class="ir_pm">이전 이미지</span></a>
+                        <ul>
+                            <li class="ban_img1"><img src="img/banner_link1.jpg" alt="웹 표준 지침서 보기"></li>
+                            <li class="ban_img2"><img src="img/banner_link2.jpg" alt="CSS 버튼 만들기"></li>
+                            <li class="ban_img3"><img src="img/banner_link3.jpg" alt="로그인 폼 만들기"></li>
+                        </ul>
+                        <a href="#" class="next"><span class="ir_pm">다음 이미지</span></a>
+                    </div> -->
                 </div>
             </div>
             <!-- //cont_ban -->
+
             <div id="cont_cont">
                 <div class="container">
                     <div class="cont">
+                        <!-- div.column.col$*6 -->
                         <div class="column col1">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
-                            <!-- 게시판 -->
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
+                            <!-- 게시판  -->
                             <div class="notice">
-                                <h4>Web Publisher Notice</h4>
+                                <h4>Web Publihser Notice</h4>
+                                <!-- ul>li*4>a[href='#'] -->
                                 <ul>
                                     <li><a href="#">display: inline과 display: block의 차이점은 무엇인가요?</a></li>
-                                    <li><a href="#">HTML 태그 중에 dl,dd,dt,ul,ol,li의 차이점은 무엇인가요?</a></li>
+                                    <li><a href="#">HTML 태그 중에 dl, dd, dt, ul, ol, li의 차이점은 무엇인가요?</a></li>
                                     <li><a href="#">HTML 태그 중에 strong과 em태그의 차이점은 무엇인가요?</a></li>
-                                    <li><a href="#">컨텐츠 요소를 가운데로 오게 하는 방법을 설명하세요!</a></li>
+                                    <li><a href="#">컨텐츠 요소를 가운데로 오게 하는 방법을 설명하세요?</a></li>
                                     <li><a href="#">독타입을 선언하는 이유에 대해서 설명하세요!</a></li>
                                 </ul>
                                 <a href="#" class="more ir_pm" title="더보기">더보기</a>
@@ -163,20 +165,20 @@
                             <!-- 게시판2 -->
                             <div class="notice2">
                                 <h4>Web Designer Notice</h4>
-                                <ul>
-                                    <li><a href="#">JPG, PNG, GIF의 차이점은 무엇인가요?</a><span>2020.10.12</span></li>
-                                    <li><a href="#">UI 디자인과 UX 디자인의 차이점을 설명하세요.</a><span>2020.10.12</span></li>
-                                    <li><a href="#">인터렉션 디자인의 핵심은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
-                                    <li><a href="#">웹 디자인과 모바일 디자인의 차이점은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
-                                    <li><a href="#">반응형 디자인과 적응형 디자인 차이점은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
-                                </ul>
-                                <a href="#" class="more ir_pm" title="더보기">더보기</a>
+                                    <ul>
+                                        <li><a href="#">JPG, PNG, GIF의 차이점은 무엇인가요?</a><span>2020.10.12</span></li>
+                                        <li><a href="#">UI 디자인과 UX 디자인의 차이점을 설명하세요?</a><span>2020.10.12</span></li>
+                                        <li><a href="#">인터렉션 디자인의 핵심은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
+                                        <li><a href="#">웹 디자인과 모바일 디자인의 차이점은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
+                                        <li><a href="#">반응형 디자인과 적응형 디자인 차이점은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
+                                    </ul>
+                                    <a href="#" class="more ir_pm" title="더보기">더보기</a>
                             </div>
                             <!-- //게시판2 -->
                         </div>
                         <div class="column col2">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
                             <!-- 게시판3 -->
                             <div class="notice3">
                                 <h4>HTML Reference</h4>
@@ -190,41 +192,44 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img src="img/notice02.jpg" alt="이미지2">
+                                            <img src="img/notice02.jpg" alt="이미지1">
                                             <strong>[HTML] div</strong>
-                                            <span>div 태그는 문서의 섹션을 만들거나 영역을 나눌 때 사용합니다.</span>
-                                        </a></li>
+                                            <span>div 태그는 문서의 섹션을 만들거나 영역을 나눌때 사용합니다.</span>
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="#">
-                                            <img src="img/notice03.jpg" alt="이미지3">
+                                            <img src="img/notice03.jpg" alt="이미지1">
                                             <strong>[HTML] dl</strong>
                                             <span>dl 태그는 용어를 설명하는 목록형 태그입니다.</span>
-                                        </a></li>
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="#">
-                                            <img src="img/notice04.jpg" alt="이미지4">
+                                            <img src="img/notice04.jpg" alt="이미지1">
                                             <strong>[HTML] em</strong>
                                             <span>em 태그는 텍스트를 강조할 때 사용합니다.</span>
-                                        </a></li>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <a href="#" class="more ir_pm" title="더보기">더보기</a>
                             </div>
                             <!-- //게시판3 -->
                         </div>
                         <div class="column col3">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
                             <!-- 로그인 -->
                             <div id="login-wrap">
                                 <h4 class="ir_so">로그인 정보</h4>
                                 <form action="post" name="login_form">
                                     <fieldset>
-                                        <legend class="ir_so">로그인 및 관련 정보</legend>
+                                        <legend class="ir_so">로그인 및 관련 설정</legend>
                                         <div class="login_header">
                                             <h5 class="ir_so">로그인 보안</h5>
                                             <div class="lh_check">
                                                 <input id="infor_check" class="input_check" type="checkbox">
-                                                <label for="infor_check">로그인 상태 유지</label> 
+                                                <label for="infor_check">로그인 상태 유지</label>
                                             </div>
                                             <div class="lh_ip">
                                                 IP보안 <em>ON</em>
@@ -251,20 +256,37 @@
                                 </form>
                             </div>
                             <!-- //로그인 -->
-                            <!-- 광고 -->
+
+                            <!-- 팝업 -->
                             <div class="popup">
-                                <h4>advertisement</h4>
-                                <div id="lightgallery">
-                                    <li><img src="img/sban07.jpg" alt="이미지7"></li>
-                                    <li><img src="img/sban08.jpg" alt="이미지8"></li>
-                                    <li><img src="img/sban09.jpg" alt="이미지9"></li>
+                                <!-- <div class="lightbox square clearfix">
+                                    <a href="assets/img/light01_s.jpg"><img src="assets/img/light01.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light02_s.jpg"><img src="assets/img/light02.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light03_s.jpg"><img src="assets/img/light03.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light04_s.jpg"><img src="assets/img/light04.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light05_s.jpg"><img src="assets/img/light05.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light06_s.jpg"><img src="assets/img/light06.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light07_s.jpg"><img src="assets/img/light07.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light08_s.jpg"><img src="assets/img/light08.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light09_s.jpg"><img src="assets/img/light09.jpg" alt="이미지"></a>
+                                    <a href="assets/img/light10_s.jpg"><img src="assets/img/light10.jpg" alt="이미지"></a>
+                                </div> -->
+                                <h4>Advertisement</h4>
+                                <div class="lightbox square clearfix">
+                                    <a href="img/sban07.jpg"></a>
+
                                 </div>
+                                <!-- <ul>
+                                    <li><img src="img/sban07.jpg" alt="이미지1"></li>
+                                    <li><img src="img/sban08.jpg" alt="이미지2"></li>
+                                    <li><img src="img/sban09.jpg" alt="이미지3"></li>
+                                </ul> -->
                             </div>
-                            <!-- //광고 -->
+                            <!-- //팝업 -->
                         </div>
                         <div class="column col4">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
                             <!-- 오버효과 -->
                             <div class="notice_hover">
                                 <h4>Mouse Hover</h4>
@@ -278,7 +300,7 @@
                                     <li>
                                         <a href="#">
                                             <span><img src="img/sban02.jpg" alt="이미지2"><em>바로가기</em></span>
-                                            <strong>프로토타입</strong>
+                                            <strong>프로토 타입</strong>
                                         </a>
                                     </li>
                                     <li>
@@ -291,7 +313,7 @@
                             </div>
                             <!-- //오버효과 -->
 
-                            <!-- 오버효과 -->
+                            <!-- 오버효과2 -->
                             <div class="notice_hover2">
                                 <ul>
                                     <li>
@@ -314,64 +336,68 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- //오버효과 -->
+                            <!-- //오버효과2 -->
                         </div>
                         <div class="column col5">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
                             <!-- 탭 메뉴 -->
                             <div class="tab_menu">
                                 <h4 class="ir_so">탭 메뉴</h4>
                                 <ul>
-                                    <li class="active"><a href="#">공지사항1</a>
+                                    <li class="active"><a href="#">공지사항1</a> 
                                         <ul>
-                                            <li><a href="#">공지사항1 첫 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항1 첫 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항1 첫 번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항1 첫번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항1 첫번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항1 첫번째 공지사항 목록입니다.</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">공지사항2</a>
-                                        <ul style="display: none;">
-                                            <li><a href="#">공지사항2 두 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항2 두 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항2 두 번째 공지사항 목록입니다.</a></li>
+                                        <ul style="display: none;"> 
+                                            <li><a href="#">공지사항2 두번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항2 두번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항2 두번째 공지사항 목록입니다.</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">공지사항3</a>
                                         <ul style="display: none;">
-                                            <li><a href="#">공지사항3 세 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항3 세 번째 공지사항 목록입니다.</a></li>
-                                            <li><a href="#">공지사항3 세 번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항3 세번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항3 세번째 공지사항 목록입니다.</a></li>
+                                            <li><a href="#">공지사항3 세번째 공지사항 목록입니다.</a></li>
                                         </ul>
                                     </li>
                                 </ul>
+                                
+                                
+                                
                             </div>
                             <!-- //탭 메뉴 -->
 
+
                             <!-- 최신 공지사항 -->
                             <div class="notice4">
-                                <h4>최신<em>공지사항</em></h4>
+                                <h4>최신 <em>공지사항</em></h4>
                                 <ul>
-                                    <li><a href="#">웹 디자이너와 웹 퍼블리셔에 대한 이야기</a><span>2018.11.19</span></li>
-                                    <li><a href="#">웹 디자이너와 웹 퍼블리셔에 대한 이야기</a><span>2018.11.19</span></li>
-                                    <li><a href="#">웹 디자이너와 웹 퍼블리셔에 대한 이야기</a><span>2018.11.19</span></li>
+                                    <li><a href="#">JPG, PNG, GIF의 차이점은 무엇인가요?</a><span>2020.10.12</span></li>
+                                    <li><a href="#">UI 디자인과 UX 디자인의 차이점을 설명하세요?</a><span>2020.10.12</span></li>
+                                    <li><a href="#">인터렉션 디자인의 핵심은 무엇이라고 생각하나요?</a><span>2020.10.12</span></li>
                                 </ul>
                                 <a href="#" class="more" title="더보기">더보기</a>
                             </div>
                             <!-- //최신 공지사항 -->
                         </div>
                         <div class="column col6">
-                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">notice</span></h3>
-                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형입니다.</p>
+                            <h3><span class="ico_img ir_pm">아이콘</span><span class="ico_tit">Notice</span></h3>
+                            <p class="ico_desc">웹 페이지에서 가장 기본이 되는 게시판 유형이니다.</p>
                             <!-- 갤러리 -->
                             <div class="gallery">
                                 <h4>포트폴리오</h4>
                                 <div class="gallery_btn">
                                     <ul>
-                                        <li class="gb_icon1"><a href="#"><span class="ir_pm">시작</span></a></li>
-                                        <li class="gb_icon2"><a href="#"><span class="ir_pm">정지</span></a></li>
-                                        <li class="gb_icon3"><a href="#"><span class="ir_pm">이전이미지</span></a></li>
-                                        <li class="gb_icon4"><a href="#"><span class="ir_pm">다음이미지</span></a></li>
+                                        <li class="gb_icon1 ir_pm"><a href="#"><span>시작</span></a></li>
+                                        <li class="gb_icon2 ir_pm"><a href="#"><span>정지</span></a></li>
+                                        <li class="gb_icon3 ir_pm"><a href="#"><span>이전이미지</span></a></li>
+                                        <li class="gb_icon4 ir_pm"><a href="#"><span>다음이미지</span></a></li>
                                     </ul>
                                 </div>
                                 <div class="gallery_img">
@@ -390,6 +416,7 @@
                 </div>
             </div>
             <!-- //cont_cont -->
+
         </div>
         <!-- //contents -->
 
@@ -401,50 +428,44 @@
                         <li><a href="#">사이트 도움말</a></li>
                         <li><a href="#">사이트 이용약관</a></li>
                         <li><a href="#">사이트 운영규칙</a></li>
-                        <li><a href="#"><strong>개인정보 취급 방침</strong></a></li>
+                        <li><a href="#"><strong>개인정보취급방침</strong></a></li>
                         <li><a href="#">책임의 한계와 법적고지</a></li>
-                        <li><a href="#">게시중단 요청 서비스</a></li>
+                        <li><a href="#">게시중단요청 서비스</a></li>
                         <li><a href="#">고객센터</a></li>
                     </ul>
                     <address>
-                        CopyRight&copy;soewon.co.kr All Right Revered
+                        CopyRight&copy;giyoung.co.kr All Right Revered
                     </address>
                 </div>
             </div>
         </div>
         <!-- //footer -->
+
     </div>
     <!-- //wrap -->
 
     <!-- script -->
     <script src="js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/lightgallery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery.min.js"></script>
     <script>
-        //라이트 박스
-        $(".popup").lightGallery(); 
-
         //이미지 슬라이드
-        $(".ban").slick({
-            autoplay: true,
-            autoplaySpeed: 1000,
-            dots: true,
-            arrows: true
-        });
+        $('.slider').slick();
+
+
 
         $(".tit .btn").click(function(event){
-            event.preventDefault();  //#의 기본 기능을 차단
-            //전체 메뉴를 보여주세요.
-            // $("#cont_nav").css("display","block");
-            // $("#cont_nav").show(0);
-            // $("#cont_nav").fadeIn();
-            // $("#cont_nav").slideDown();
-            // $("#cont_nav").toggle(); //show() + hide()
-            // $("#cont_nav").fadeToggle(); //fadeIn () + fadeOut()
-            $("#cont_nav").slideToggle(); //sildeIn () + sildeOut()
-            $(this).toggleClass("on");
-        });
+            event.preventDefault();     //#의 기본 기능을 차단
+            //전체 메뉴를 보여주세요
+            //$("#cont_nav").css("display", "block");
+            //$("#cont_nav").show();
+            //$("#cont_nav").fadeIn();
+            //$("#cont_nav").slideDown();
+            //$("#cont_nav").toggle();    //show() + hide()
+            //$("#cont_nav").fadeToggle();    //fadeIn() + fadeOut();
+            $("#cont_nav").slideToggle();    //slideIn() + slideOut();
+            $(this).toggleClass("on")
+        })
     </script>
 </body>
-
 </html>
