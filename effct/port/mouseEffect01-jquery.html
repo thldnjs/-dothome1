@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect01 - jQuery</title>
+    <style>
+        @font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LotteMartHappy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartHappy/LotteMartHappyBold.woff') format('woff');
+}
+
+.lottemarthappy * {
+ font-family: 'LotteMartHappy', sans-serif;
+}
+
+        *, *::before, *::after {
+            box-sizing: border-box; margin: 0; padding: 0; color: #fff;
+        }
+        a {text-decoration: none; color: #fff; transition: all 0.2s;}
+        a:hover {border-bottom: 1px dashed #fff;}
+        img {width: 100%; vertical-align: top;}
+        li {list-style: none;}
+        body {
+            background: #ebad4f url(img/images14@2.jpg) no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+            line-height: 1.5;
+            font-family: 'LotteMartHappy';
+            background-blend-mode: luminosity;
+            cursor: none;
+        }
+
+        /* main */
+        .contents {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+        }
+        .contents p {
+            font-size: 3vw;
+            color: #fff;
+        }
+
+        .contents p em {
+            color: #00ccff;
+            border-bottom: 2px dashed rgb(0, 204, 255);
+            font-style: normal;
+        }
+        .contents p:first-child {
+            font-size: 2.3vw;
+            line-height: 2;
+        }
+
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            user-select: none;
+            pointer-events: none;
+            transition: background-color .2s, 
+            border-color .2s, 
+            transform .9s, 
+            border-radius .7s;
+        }
+
+        .cursor.active {
+            background-color: rgba(0, 204, 255, 0.4);
+            border-color: blue;
+            transform: scale(2) rotate(720deg);
+            border-radius: 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- info -->
+    <div class="cursor"></div>
+    <!-- //info -->
+    <main>
+        <div class="contents">
+            <p>To climb step hills requires <em>slow</em> pace at first</p>
+            <p>험준한 산을 오르기 위해선 먼저 <em>천천히</em> 걸어야한다.</p>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        
+        $(window).mousemove(function(event){
+            $(".clientX").text(event.clientX);
+            $(".clientY").text(event.clientY);
+            $(".offsetX").text(event.offsetX);
+            $(".offsetY").text(event.offsetY);
+            $(".pageX").text(event.pageX);
+            $(".pageY").text(event.pageY);
+            $(".screenX").text(event.screenX);
+            $(".screenY").text(event.screenY);
+        });
+        //마우스 움직이기
+        $(window).mousemove(function(e){
+            $(".cursor").css({left: e.clientX - 25, top: e.clientY - 25});
+        });
+
+        //em태그에 마우스를 오버했을 때 active 클래스를 추가
+        $(".contents em").hover(function(){
+            $(".cursor").addClass("active");
+        },function(){
+            $(".cursor").removeClass("active");
+        });
+        //em태그에 마우스가 벗어났을 때 active 클래스를 제거
+        
+        
+    </script>
+</body>
+</html>

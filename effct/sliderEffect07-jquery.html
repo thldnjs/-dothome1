@@ -139,6 +139,8 @@
             left: 50%;
             bottom: 30px;
             transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
         }
         .slider-dot a {
             width: 20px;
@@ -148,10 +150,24 @@
             text-indent: -9999px;
             border-radius: 5px;
             margin: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
+            /* 닷 이미지 */
+            width: 150px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            background-size: cover;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-indent: initial;
+            color: #fff;
         }
         .slider-dot a.active {
-            background: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.9);
+            background-size: cover;
+            background-color: rgba(44, 1, 1, 1);
+            background-blend-mode: difference;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -185,6 +201,8 @@
                 <div class="slider s3"><img src="img/images11.jpg" alt="이미지3"><span>이미지3</span></div>
                 <div class="slider s4"><img src="img/images10.jpg" alt="이미지4"><span>이미지4</span></div>
                 <div class="slider s5"><img src="img/images09.jpg" alt="이미지5"><span>이미지5</span></div>
+                <div class="slider s6"><img src="img/images08.jpg" alt="이미지6"><span>이미지6</span></div>
+                <div class="slider s7"><img src="img/images07.jpg" alt="이미지7"><span>이미지7</span></div>
             </div>
         </div>
         <div class="slider-btn">
@@ -202,63 +220,65 @@
     <!-- //main -->
 
 <!-- script -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        const sliderWrap = $(".slider-wrap");
-        const sliderImg = $(".slider-img");
-        const slider = $(".slider");
-        const sliderBtn = $(".slider-btn");
-        const sliderDot = $(".slider-dot");
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    const sliderWrap = $(".slider-wrap");
+    const sliderImg = $(".slider-img");
+    const slider = $(".slider");
+    const sliderBtn = $(".slider-btn");
+    const sliderDot = $(".slider-dot");
 
-        let sliderCount = slider.length;
-        let sliderWidth = slider.outerWidth();
-        let sliderHeight = slider.outerHeight();
-        let sliderTotalWidth = sliderWidth * sliderCount;
-        let currentIndex = 0;
-        let dotIndex = "";
-        
-        // let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone();
-        // sliderImg.append(sliderCopy);
+    let sliderCount = slider.length;
+    let sliderWidth = slider.outerWidth();
+    let sliderHeight = slider.outerHeight();
+    let sliderTotalWidth = sliderWidth * sliderCount;
+    let currentIndex = 0;
+    let dotIndex = "";
+    
+    // let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone();
+    // sliderImg.append(sliderCopy);
 
-        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight });
+    sliderImg.css({ width: sliderTotalWidth, height: sliderHeight });
 
-        //이미지 움직이기
-        function gotoSlider(index){
-            sliderImg.animate({left: -sliderWidth * index} ,400);
-            currentIndex = index;
-            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
-        }
+    //이미지 움직이기
+    function gotoSlider(index){
+        sliderImg.animate({left: -sliderWidth * index} ,400);
+        currentIndex = index;
+        sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+    }
 
-        //이미지 갯수만큼 닷 버튼 만들기
-        slider.each(function(){
-            dotIndex += "<a href='#'></a>";
-        });
-        sliderDot.html(dotIndex);
-        sliderDot.find("a").eq(0).addClass("active");
+    //이미지 갯수만큼 닷 버튼 만들기
+    slider.each(function(){
+        // dotIndex += "<a href='#'></a>";
+        let sliderName = $(this).find("img").attr("alt");
+        let sliderSrc = $(this).find("img").attr("src");
+        dotIndex += "<a href='#' style='background-image:url("+sliderSrc+")'>"+sliderName+"</a>";
+    });
+    sliderDot.html(dotIndex);
+    sliderDot.find("a").eq(0).addClass("active");
 
-        //닷 버튼 클릭하기
-        sliderDot.on("click", "a", function(e){
-            e.preventDefault();
-            gotoSlider($(this).index());
-        });
+    //닷 버튼 클릭하기
+    sliderDot.on("click", "a", function(e){
+        e.preventDefault();
+        gotoSlider($(this).index());
+    });
 
-        //버튼 클릭하기
-        sliderBtn.on("click", "a" , function(e){
-            e.preventDefault();
-            let nextIndex = (currentIndex + 1) % sliderCount;
-            let prevIndex = (currentIndex - 1) % sliderCount;
-            if(currentIndex == 0) prevIndex = sliderCount-1;
+    //버튼 클릭하기
+    sliderBtn.on("click", "a" , function(e){
+        e.preventDefault();
+        let nextIndex = (currentIndex + 1) % sliderCount;
+        let prevIndex = (currentIndex - 1) % sliderCount;
+        if(currentIndex == 0) prevIndex = sliderCount-1;
 
-            console.log("nextIndex :" + nextIndex)
-            console.log("prevIndex :" + prevIndex)
+        console.log("nextIndex :" + nextIndex)
+        console.log("prevIndex :" + prevIndex)
 
-            if($(this).hasClass("prev")){
-                gotoSlider(prevIndex);
-            } else {
-                gotoSlider(nextIndex);
-            };
-        });
-
-    </script>
+        if($(this).hasClass("prev")){
+            gotoSlider(prevIndex);
+        } else {
+            gotoSlider(nextIndex);
+        };
+    });
+</script>
 </body>
 </html>
