@@ -2,11 +2,11 @@
 @import url(//db.onlinewebfonts.com/c/0a0cbbd2ee416efdde8260f3aafa0d14?family=Morion+Bold);
 #wrap {
     width: 100%;
-    height: 12003px;
+    height: 21076px;
 }
 #header {
     width: 100%;
-    height: 1847px;
+    height: 3925px;
     background-color: #E6E5DF;
 }
 #contents {
@@ -22,7 +22,6 @@
 .container {
     width: 1460px;
     height: inherit;
-   
     margin: 0 auto;
 }
 
@@ -79,8 +78,10 @@
     margin: -360px 480px;
 }
 #header .pic {
-    width: 1600px;
-    margin: -1017px 0px 0px -13px;
+    position: absolute;
+    width: 1500px;
+    margin: -1080px 0px 0px -20px;
+    top: 2100px;
 }
 
 
