@@ -264,7 +264,8 @@
     .help article {height: auto;}
     .service li {width: 25%; height: auto;}
     .service li:nth-child(1) {border: 1px solid #d7d7d7;}
-    .service li:nth-child(2) {border: 1px solid #d7d7d7; border-right: 0; border-left: 0;}
+    .service li:nth-child(2) {border: 1px solid #d7d7d7; border-right: 0; 
+    border-left: 0;}
     .service li a strong {display: block; padding-bottom: 10%;}
 }
 @media (max-width: 960px){
@@ -300,7 +301,8 @@
 
     #movie {background: none;}
     #movie .row {background: #fff; margin: 24px 24px 0 24px; padding: 24px;} 
-    #movie .ir_so {position: static; width: auto; height: auto; line-height: normal; text-indent: 0; font-size: 24px; font-weight: bold; padding-bottom: 20px;}
+    #movie .ir_so {position: static; width: auto; height: auto; line-height: normal; 
+        text-indent: 0; font-size: 24px; font-weight: bold; padding-bottom: 20px;}
     .movie {padding: 0;}
     .movie_title {margin-bottom: 30px;}
     .movie_title ul {position: relative; padding-bottom: 10px;}

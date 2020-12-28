@@ -548,7 +548,9 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .nav > div:last-child li {width: 33.3333%;}
 
     #cont_right {display: flex;}
-    #cont_right .column {border-bottom: none; border-right: 1px solid #dbdbdb; border-top: 1px solid #dbdbdb;}
+    #cont_right .column {border-bottom: none; 
+        border-right: 1px solid #dbdbdb; 
+        border-top: 1px solid #dbdbdb;}
     #cont_right .column:last-child {border-right: none;}
 }
 
