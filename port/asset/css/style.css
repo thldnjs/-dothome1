@@ -8,6 +8,12 @@
     font-style: normal;
 }
 @font-face {font-family: "Morion Bold"; src: url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.eot"); src: url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.woff") format("woff"), url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0a0cbbd2ee416efdde8260f3aafa0d14.svg#Morion Bold") format("svg"); }
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* layout 영역 */
 #wrap {
@@ -287,15 +293,54 @@
 }
 #cont2 .container .cont2-left .txt1 {
     position: absolute;
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: ChosunilboNM;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.73;
+    letter-spacing: 1.1px;
+    text-align: right;
+    color: #d9e1cc;
+    top: 62vw;
+    left: 14vw;
 }
 #cont2 .container .cont2-left .txt2 {
     position: absolute;
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.85;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #d9e1cc;
+    border-right: 2px solid #d9e1cc;
+    padding: 0px 30px;
+    transform: rotate(-90deg);
+    top: 98.5vw;
+    left: 21vw;
 }
 #cont2 .container .cont2-left .link1 {
     position: absolute;
+    font-family: Unna;
+    font-size: 27px;
+    font-weight: normal;
+    text-align: right;
+    color: #d9e1cc;
+    top: 78vw;
+    left: 17vw;
 }
 #cont2 .container .cont2-left .link2 {
     position: absolute;
+    font-family: Unna;
+    font-size: 27px;
+    font-weight: normal;
+    text-align: right;
+    color: #d9e1cc;
+    top: 78vw;
+    left: 27vw;
+    border-right: 1px solid #d9e1cc;
+    padding-right: 70px;
 }
 #cont2 .container .cont2-left img {
     position: absolute;
@@ -303,4 +348,57 @@
     height: 276px;
     top: 91vw;
     left: 31vw;
+}
+
+/* 코드 영역 */
+.sc-right .editor {
+    position: relative;
+    background: #35363A;
+    border-radius: 5%;
+}
+.site .editor .editor-tab {
+    height: 40px; background: #21252B; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    display: flex;
+}
+.site .editor .editor-tab .dot {padding: 14px 55px 14px 14px;}
+.site .editor .editor-tab .dot span {
+    display: block;
+    background: #FFB83D; width: 12px; height: 12px; border-radius: 50%;
+    position: relative;
+}
+.site .editor .editor-tab .dot span::before {
+    content: '';
+    background: #FF4A4A; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 20px;
+}
+.site .editor .editor-tab .dot span::after {
+    content: ''; 
+    background: #00C543; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 40px;
+}
+.site .editor .editor-tab .menu {overflow: hidden;}
+.site .editor .editor-tab .menu li {float: left;}
+.site .editor .editor-tab .menu li a {
+    display: block; background: #21252B; color: #8E9093; padding: 11px 32px;
+    font-family: "Poppins", sans-serif;
+}
+.site .editor .editor-tab .menu li.active a {background: #383E4A;  color: #fff;}
+.site .editor .editor-tab .theme {
+    color: #8E9093; margin-left: auto;
+    padding: 11px 32px;
+}
+.site .editor .editor-code {
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    height: 500px; 
+    background: #282C34;
+    overflow: auto;
+}
+.site .editor .numberswrap {
+    position: absolute;
+    top: 39px; left: 0;
+    width: 100%; height: 500px;
+    overflow: auto;
 }
