@@ -1,6 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Unna:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @font-face {
     font-family: 'Chosunilbo_myungjo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
@@ -18,7 +19,7 @@
 /* layout 영역 */
 #wrap {
     width: 100%;
-    height: 21476px;
+    height: 21576px;
 }
 #header {
     width: 100%;
@@ -44,7 +45,7 @@
     width: 1460px;
     height: inherit;
     margin: 0 auto;
-    background-color: #444;
+    background-color: #222;
 }
 #cont1 {
     width: 100%;
@@ -52,8 +53,16 @@
 }
 #cont2 {
     width: 100%;
-    height: 2608px;
+    height: 2708px;
+}
+#cont3 {
+    width: 100%;
+    height: 2525px;
     background-color: #333;
+}
+#cont4 {
+    width: 100%;
+    height: 2292px;
 }
 /* header 메뉴 */
 #header .text {
@@ -234,8 +243,6 @@
     font-family: morion bold;
     font-size: 200px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.2;
     letter-spacing: normal;
     text-align: right;
@@ -246,8 +253,6 @@
     font-family: Unna;
     font-size: 43px;
     font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.47;
     letter-spacing: normal;
     text-align: left;
@@ -293,16 +298,16 @@
 }
 #cont2 .container .cont2-left .txt1 {
     position: absolute;
-    -webkit-text-stroke: 0.3px #d9e1cc;
-    font-family: ChosunilboNM;
+    -webkit-text-stroke: 0.1px #e3e9d9;
+    font-family: 'Chosunilbo_myungjo';
     font-size: 22px;
     font-weight: normal;
-    line-height: 1.73;
-    letter-spacing: 1.1px;
+    line-height: 1.8;
+    letter-spacing: 2px;
     text-align: right;
-    color: #d9e1cc;
+    color: #e3e9d9;
     top: 62vw;
-    left: 14vw;
+    left: 12vw;
 }
 #cont2 .container .cont2-left .txt2 {
     position: absolute;
@@ -317,8 +322,8 @@
     border-right: 2px solid #d9e1cc;
     padding: 0px 30px;
     transform: rotate(-90deg);
-    top: 98.5vw;
-    left: 21vw;
+    top: 98.6vw;
+    left: 22vw;
 }
 #cont2 .container .cont2-left .link1 {
     position: absolute;
@@ -340,7 +345,7 @@
     top: 78vw;
     left: 27vw;
     border-right: 1px solid #d9e1cc;
-    padding-right: 70px;
+    padding-right: 58px;
 }
 #cont2 .container .cont2-left img {
     position: absolute;
@@ -350,55 +355,450 @@
     left: 31vw;
 }
 
-/* 코드 영역 */
-.sc-right .editor {
-    position: relative;
-    background: #35363A;
-    border-radius: 5%;
-}
-.site .editor .editor-tab {
-    height: 40px; background: #21252B; 
-    border-top-left-radius: 5px; 
-    border-top-right-radius: 5px;
-    display: flex;
-}
-.site .editor .editor-tab .dot {padding: 14px 55px 14px 14px;}
-.site .editor .editor-tab .dot span {
-    display: block;
-    background: #FFB83D; width: 12px; height: 12px; border-radius: 50%;
-    position: relative;
-}
-.site .editor .editor-tab .dot span::before {
-    content: '';
-    background: #FF4A4A; width: 12px; height: 12px; border-radius: 50%;
-    position: absolute; left: 20px;
-}
-.site .editor .editor-tab .dot span::after {
-    content: ''; 
-    background: #00C543; width: 12px; height: 12px; border-radius: 50%;
-    position: absolute; left: 40px;
-}
-.site .editor .editor-tab .menu {overflow: hidden;}
-.site .editor .editor-tab .menu li {float: left;}
-.site .editor .editor-tab .menu li a {
-    display: block; background: #21252B; color: #8E9093; padding: 11px 32px;
-    font-family: "Poppins", sans-serif;
-}
-.site .editor .editor-tab .menu li.active a {background: #383E4A;  color: #fff;}
-.site .editor .editor-tab .theme {
-    color: #8E9093; margin-left: auto;
-    padding: 11px 32px;
-}
-.site .editor .editor-code {
-    border-bottom-left-radius: 5px; 
-    border-bottom-right-radius: 5px;
-    height: 500px; 
-    background: #282C34;
-    overflow: auto;
-}
-.site .editor .numberswrap {
+/* cont2 코드 영역 */
+
+#cont2 .container .coding {
+    width: 45.5%;
+    height: 60.6vh;
+    background: #1e1e1e;
+    overflow: hidden;
+    border-radius: 5px;
     position: absolute;
-    top: 39px; left: 0;
-    width: 100%; height: 500px;
-    overflow: auto;
+    top: 391.1vw;
+    left: 42.7vw;
+  }
+  
+  #cont2 .container .coding div.show {
+    display: inline-block;
+  }
+  
+  #cont2 .container .coding .cnav {
+    background: 
+    #21252b;
+    display: flex;
+  }
+  
+  #cont2 .container .coding .cnav div {
+    background: 
+    #21252b;
+    display: inline-block;
+    padding: 2% 4% 2% 4%;
+  }
+  
+  #cont2 .container .coding .cnav div p {
+    font-size: .7vw;
+    color: #7A7C89;
+  }
+  
+  #cont2 .container .coding .cnav .show {
+    background: #333E54;
+    display: inline-block;
+    padding: 2% 4% 2% 4%;
+    position: relative;
+  }
+  
+  #cont2 .container .coding .cnav .show p {
+    color: #fff;
+  }
+
+  #cont2 .container .coding .code1 {
+    color: #fff;
+  }
+
+  #cont2 .container .coding .code1 pre {
+    
+}
+
+/* 코드 왼쪽 영역 */
+#cont2 .container .coding-left {}
+#cont2 .container .coding-left .rect {
+    position: relative;
+}
+#cont2 .container .coding-left .rect .rect1 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 120vw;
+    left: 5vw;
+}
+#cont2 .container .coding-left .rect .rect2 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 123vw;
+    left: 5vw;
+}
+#cont2 .container .coding-left .rect .rect3 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 126vw;
+    left: 5vw;
+    background-color: #d9e1cc;
+}
+#cont2 .container .coding-left .rect .rect4 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 129vw;
+    left: 5vw;
+}
+#cont2 .container .coding-left .rect .rect5 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 132vw;
+    left: 5vw;
+}
+
+#cont2 .container .coding-left .txt {
+    position: relative;
+}
+#cont2 .container .coding-left .txt .txt1 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 119.7vw;
+    left: 8.5vw;
+}
+#cont2 .container .coding-left .txt .txt2 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 122.7vw;
+    left: 8.5vw;
+}
+#cont2 .container .coding-left .txt .txt3 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 125.7vw;
+    left: 8.5vw;
+}
+#cont2 .container .coding-left .txt .txt4 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 128.7vw;
+    left: 8.5vw;
+}
+#cont2 .container .coding-left .txt .txt5 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1.2px;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 131.7vw;
+    left: 8.5vw;
+}
+
+/* cont3 영역 */
+#cont3 .container .cont3-left {
+    position: relative;
+}
+#cont3 .container .cont3-left h2 {
+    position: absolute;
+    -webkit-text-stroke: 0.5px #ffffff;
+    font-family: morion bold;
+    font-size: 65px;
+    font-weight: bold;
+    letter-spacing: 1.95px;
+    text-align: left;
+    color: #d9e1cc;
+    top: 17.5vw;
+    left: 8vw;
+}
+#cont3 .container .cont3-left img {
+    position: absolute;
+    width: 591px;
+    height: 778px;
+    top: 25vw;
+}
+
+#cont3 .container .cont3-right {
+    position: relative;
+}
+#cont3 .container .cont3-right .txt1 {
+    position: absolute;
+    -webkit-text-stroke: 0.1px #e3e9d9;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.8;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #e3e9d9;
+    top: 27vw;
+    left: 39vw;
+}
+#cont3 .container .cont3-right .txt2 {
+    position: absolute;
+    font-family: 'S-CoreDream-4Regular';
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.85;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #d9e1cc;
+    border-right: 2px solid #d9e1cc;
+    padding: 0px 30px;
+    transform: rotate(90deg);
+    top: 61.1vw;
+    left: 39.5vw;
+}
+#cont3 .container .cont3-right .link1 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 27px;
+    font-weight: normal;
+    text-align: right;
+    color: #d9e1cc;
+    top: 44vw;
+    left: 52vw;
+}
+#cont3 .container .cont3-right .link2 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 27px;
+    font-weight: normal;
+    text-align: right;
+    color: #d9e1cc;
+    top: 44vw;
+    left: 39vw;
+    border-left: 1px solid #d9e1cc;
+    padding-left: 58px;
+}
+#cont3 .container .cont3-right img {
+    position: absolute;
+    width: 413px;
+    height: 276px;
+    top: 57vw;
+    left: 23vw;
+}
+
+/* cont3 코딩영역 */
+#cont3 .container {
+    position: relative;
+}
+#cont3 .container .coding {
+    width: 59%;
+    height: 60.6vh;
+    background: #1e1e1e;
+    overflow: hidden;
+    border-radius: 5px;
+    position: absolute;
+    top: 78.1vw;
+  }
+  
+  #cont3 .container .coding div.show {
+    display: inline-block;
+  }
+  
+  #cont3 .container .coding .cnav {
+    background: 
+    #21252b;
+    display: flex;
+  }
+  
+  #cont3 .container .coding .cnav div {
+    background: 
+    #21252b;
+    display: inline-block;
+    padding: 2% 4% 2% 4%;
+  }
+  
+  #cont3 .container .coding .cnav div p {
+    font-size: .7vw;
+    color: #7A7C89;
+  }
+  
+  #cont3 .container .coding .cnav .show {
+    background: #333E54;
+    display: inline-block;
+    padding: 2% 4% 2% 4%;
+    position: relative;
+  }
+  
+  #cont3 .container .coding .cnav .show p {
+    color: #fff;
+  }
+
+  #cont3 .container .coding .code1 {
+    color: #fff;
+  }
+
+  #cont3 .container .coding .code1 pre {
+    
+}
+
+/* 코드 왼쪽 영역 */
+#cont3 .container .coding-right {}
+#cont3 .container .coding-right .rect {
+    position: relative;
+}
+#cont3 .container .coding-right .rect .rect1 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 86vw;
+    left: 56vw;
+}
+#cont3 .container .coding-right .rect .rect2 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 89vw;
+    left: 56vw;
+}
+#cont3 .container .coding-right .rect .rect3 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 92vw;
+    left: 56vw;
+}
+#cont3 .container .coding-right .rect .rect4 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 95vw;
+    left: 56vw;
+    background-color: #d9e1cc;
+}
+#cont3 .container .coding-right .rect .rect5 {
+    border: 1px solid #d9e1cc;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 98vw;
+    left: 56vw;
+}
+
+#cont3 .container .coding-right .txt {
+    position: relative;
+}
+#cont3 .container .coding-right .txt .txt1 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+    color: #d9e1cc;
+    position: absolute;
+    top: 85.7vw;
+    left: 59.5vw;
+}
+#cont3 .container .coding-right .txt .txt2 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #d9e1cc;
+    position: absolute;
+    top: 88.7vw;
+    left: 59.5vw;
+}
+#cont3 .container .coding-right .txt .txt3 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #d9e1cc;
+    position: absolute;
+    top: 91.7vw;
+    left: 59.5vw;
+}
+#cont3 .container .coding-right .txt .txt4 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #d9e1cc;
+    position: absolute;
+    top: 94.7vw;
+    left: 59.5vw;
+}
+#cont3 .container .coding-right .txt .txt5 {
+    -webkit-text-stroke: 0.3px #d9e1cc;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #d9e1cc;
+    position: absolute;
+    top: 97.7vw;
+    left: 59.5vw;
+}
+
+/* cont4 영역 */
+#cont4 .container {
+    position: relative;
+}
+#cont4 .container .pic {
+    
+}
+#cont4 .container .pic img {
+    width: 449px;
+    height: 927px;
+    margin: 2px 0 0;
+    background-color: rgba(80, 105, 103, 0.4);
+}
+#cont4 .container .pic .pic1 {
+    position: absolute;
+    left: 52.7vw;
+}
+#cont4 .container .pic .pic2 {
+    position: absolute;
+    top: 35.5vw;
+}
+#cont4 .container .pic .pic3 {
+    position: absolute;
+    top: 71vw;
+    left: 52.7vw;
+}
+#cont4 .container .txt {
+    position: relative;
+}
+#cont4 .container .txt p {
+    -webkit-text-stroke: 3px #d9e1cc;
+    font-family: 'Yeseva One';
+    font-size: 170px;
+    line-height: 1.25;
+    letter-spacing: 3.4px;
+    text-align: center;
+    color: #d9e1cc;
+    z-index: -1;
+    padding-top: 30vw;
 }
