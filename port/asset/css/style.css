@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap');
 @font-face {
     font-family: 'Chosunilbo_myungjo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
@@ -70,6 +72,15 @@
 #cont6 {
     width: 100%;
     height: 1056px;
+}
+#cont7 {
+    width: 100%;
+    height: 1794px;
+    overflow: hidden;
+}
+#cont8 {
+    width: 100%;
+    height: 1292px;
 }
 /* header 메뉴 */
 #header .text {
@@ -239,6 +250,7 @@
 /* content1 영역 */
 #contents #cont1 img {
     background-size: cover;
+    height: 1144px;
 }
 
 /* content2 영역 */
@@ -932,10 +944,6 @@
 #cont5 .container {
     position: relative;
 }
-#cont5 .container .cont5-2 {
-    width: 200%;
-    height: 100vh;
-}
 #cont5 .container .cont5-2 .cont5-2.left {
     width: 63.5%;
     height: 60.6vh;
@@ -987,7 +995,7 @@
     
 }
 
-/* 코드 왼쪽 영역 */
+/* 코드 오른쪽 영역 */
 #cont5 .container .cont5-2 .cont5-2.right {}
 #cont5 .container .cont5-2 .cont5-2.right .rect {
     position: relative;
@@ -1034,9 +1042,6 @@
     left: 56vw;
 }
 
-#cont5 .container .cont5-2 .cont5-2.right .txt {
-    width: 40%;
-}
 #cont5 .container .cont5-2 .cont5-2.right .txt .txt1 {
     -webkit-text-stroke: 0.3px #d9e1cc;
     font-family: 'Chosunilbo_myungjo';
@@ -1089,3 +1094,263 @@
     left: 59.5vw;
 }
 
+/* 푸터 cont1 영역 */
+#footer #cont6 img {
+    background-size: cover;
+    height: 1056px;
+}
+
+#footer #cont7 .ani {
+    position: relative;
+}
+#footer #cont7 .ani .img {
+   display: flex;
+}
+#footer #cont7 .ani .img .img1 {
+    position: absolute;
+    width: 586.6px;
+    height: 974.4px;
+    margin: 57.2px 148.4px 92.5px 127px;
+    padding: 364.9px 94.4px 364.6px 120px;
+    transform: rotate(-2deg);
+    left: 14vw;
+}
+#footer #cont7 .ani .img .img2 {
+    position: absolute;
+    width: 586.6px;
+    height: 974.4px;
+    margin: 45.3px 7px 104.4px 148.4px;
+    transform: rotate(-2deg);
+    top: 19vw;
+    left: 62vw;
+}
+#footer #cont7 .ani .hovertxt {
+    position: relative;
+}
+#footer #cont7 .ani .hovertxt .flower h2 {
+    position: absolute;
+    transform: rotate(-2deg);
+    -webkit-text-stroke: 0.7px #d9e1cc;
+    font-family: Tinos;
+    font-size: 50px;
+    letter-spacing: normal;
+    color: #d9e1cc;
+    top: 44vw;
+    left: 32vw;
+}
+#footer #cont7 .ani .hovertxt .flower a {
+    position: absolute;
+    transform: rotate(-7deg);
+    -webkit-text-stroke: 0.5px #d9e1cc;
+    font-family: 'Allura';
+    font-size: 40px;
+    letter-spacing: normal;
+    color: #d9e1cc;
+    top:48vw;
+    left: 35vw;
+}
+#footer #cont7 .ani .hovertxt .gsap h2 {
+    position: absolute;
+    transform: rotate(-2deg);
+    -webkit-text-stroke: 0.7px #d9e1cc;
+    font-family: Tinos;
+    font-size: 50px;
+    letter-spacing: normal;
+    color: #d9e1cc;
+    top: 43vw;
+    left: 77vw;
+    overflow: visible;
+}
+#footer #cont7 .ani .hovertxt .gsap a {
+    position: absolute;
+    transform: rotate(-7deg);
+    -webkit-text-stroke: 0.5px #d9e1cc;
+    font-family: 'Allura';
+    font-size: 43px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #d9e1cc;
+    top: 47vw;
+    left: 79vw;
+}
+#footer #cont7 .txt {
+    position: relative;
+}
+#footer #cont7 .txt .txt1 {
+    position: absolute;
+    -webkit-text-stroke: 0.2px #38524f;
+    font-family: Unna;
+    font-size: 43px;
+    color: #38524f;
+    top: 15vw;
+    left: 9vw;
+}
+#footer #cont7 .txt .txt2 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #2a423c;
+    border-bottom: 2px solid #2a423c;
+    top: 91vw;
+    left: 12vw;
+}
+#footer #cont7 .txt h2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    -webkit-text-stroke: 0.7px #38524f;
+    font-family: Unna;
+    font-size: 80px;
+    line-height: 1.15;
+    letter-spacing: 1.6px;
+    text-align: right;
+    color: #38524f;
+    top: 28vw;
+    left: -3vw;
+}
+
+/* cont8 영역 */
+#footer #cont8 .container .cont8-left {}
+#footer #cont8 .container .cont8-left .left {position: relative;}
+#footer #cont8 .container .cont8-left .left h2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    -webkit-text-stroke: 0.7px #38524f;
+    font-family: Unna;
+    font-size: 80px;
+    line-height: 1.1;
+    letter-spacing: 1.6px;
+    text-align: right;
+    color: #38524f;
+    top: 10vw;
+    left: -13vw;
+}
+#footer #cont8 .container .cont8-left .effect {
+    position: relative;
+}
+#footer #cont8 .container .cont8-left .effect img {
+    position: absolute;
+    width: 886px;
+    height: 581px;
+    top: 6vw;
+    left: 6vw;
+}
+#footer #cont8 .container .cont8-left .effect h2 {
+    position: absolute;
+    width: 232px;
+    height: 104px;
+    margin: 0 178px 53px 0;
+    font-family: 'Playfair Display SC';
+    font-size: 46px;
+    line-height: 1.1;
+    letter-spacing: 0.92px;
+    text-align: left;
+    color: #ffffff;
+    top: 13.5vw;
+    left: 15.5vw;
+}
+#footer #cont8 .container .cont8-left .effect h2 span {
+    font-size: 55px;
+    letter-spacing: 1.1px;
+}
+#footer #cont8 .container .cont8-left .effect button {
+    position: absolute;
+}
+#footer #cont8 .container .cont8-left .effect p {
+    position: absolute;
+    font-family: 'Playfair Display SC';
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #ffffff;
+    top: 21vw;
+    left: 15.7vw;
+}
+#footer #cont8 .container .cont8-left .effect a {
+    position: absolute;
+    font-family: PlayfairDisplaySC;
+    font-size: 13px;
+    letter-spacing: 0.26px;
+    color: #ffffff;
+    border-bottom: 2px solid #fff;
+    top: 25.2vw;
+    left: 15.7vw;
+}
+
+/* 오른쪽 영역 */
+#cont8 .container .cont8-right { position: relative;}
+#cont8 .container .cont8-right .rect .rect1 {
+    border: 1px solid #2A423C;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 15vw;
+    left: 57vw;
+}
+#cont8 .container .cont8-right .rect .rect2 {
+    border: 1px solid #2A423C;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 18vw;
+    left: 57vw;
+}
+#cont8 .container .cont8-right .rect .rect3 {
+    border: 1px solid #2A423C;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 21vw;
+    left: 57vw;
+}
+#cont8 .container .cont8-right .rect .rect4 {
+    border: 1px solid #2A423C;
+    width: 28px; height: 28px;
+    position: absolute;
+    border-radius: 2px;
+    top: 24vw;
+    left: 57vw;
+    background-color: #2A423C;
+}
+#cont8 .container .cont8-right .eff .txt1 {
+    -webkit-text-stroke: 0.3px #2A423C;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+    color: #2A423C;
+    position: absolute;
+    top: 14.8vw;
+    left: 59.5vw;
+}
+#cont8 .container .cont8-right .eff .txt2 {
+    -webkit-text-stroke: 0.3px #2A423C;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #2A423C;
+    position: absolute;
+    top: 17.8vw;
+    left: 59.5vw;
+}
+#cont8 .container .cont8-right .eff .txt3 {
+    -webkit-text-stroke: 0.3px #2A423C;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #2A423C;
+    position: absolute;
+    top: 20.8vw;
+    left: 59.5vw;
+}
+#cont8 .container .cont8-right .eff .txt4 {
+    -webkit-text-stroke: 0.3px #2A423C;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 24px;
+    font-weight: normal;
+    color: #2A423C;
+    position: absolute;
+    top: 23.8vw;
+    left: 59.5vw;
+}
