@@ -82,6 +82,14 @@
     width: 100%;
     height: 1292px;
 }
+#cont9 {
+    width: 100%;
+    height: 1791px;
+}
+#cont10 {
+    width: 100%;
+    height: 1023px;
+}
 /* header 메뉴 */
 #header .text {
     display: flex;
@@ -1192,7 +1200,7 @@
     letter-spacing: normal;
     color: #2a423c;
     border-bottom: 2px solid #2a423c;
-    top: 91vw;
+    top: 82vw;
     left: 12vw;
 }
 #footer #cont7 .txt h2 {
@@ -1353,4 +1361,237 @@
     position: absolute;
     top: 23.8vw;
     left: 59.5vw;
+}
+/* cont9 영역 */
+#cont9 .container .cont9-left {
+    position: relative;
+}
+#cont9 .container .cont9-left h2 {
+    position: absolute;
+    transform: rotate(-90deg);
+    -webkit-text-stroke: 0.7px #38524f;
+    font-family: Unna;
+    font-size: 80px;
+    line-height: 1.1;
+    letter-spacing: 1.6px;
+    text-align: right;
+    color: #38524f;
+    top: 3.9vw;
+    left: -12vw;
+}
+#cont9 .container .cont9-left .img1 {
+    position: absolute;
+    width: 584px;
+    height: 569px;
+    top: 1vw;
+    left: 6vw;
+}
+#cont9 .container .cont9-left .img2 {
+    position: absolute;
+    width: 584px;
+    height: 569px;
+    top: 50vw;
+    left: 6vw;
+}
+#cont9 .container .cont9-right {
+    position: relative;
+}
+#cont9 .container .cont9-right .up {}
+#cont9 .container .cont9-right .up h2 {
+    position: absolute;
+    font-family: 'Playfair Display SC';
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 0.62;
+    color: #38524f;
+    top: 7vw;
+    left: 44vw;
+}
+#cont9 .container .cont9-right .up p {
+    position: absolute;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    color: #38524f;
+    top: 12vw;
+    left: 44vw;
+}
+#cont9 .container .cont9-right .up a {
+    position: absolute;
+    font-family: 'Playfair Display SC';
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #2a423c;
+    border-bottom: 1px solid #38524f;
+    top: 19.5vw;
+    left: 44vw;
+}
+#cont9 .container .cont9-right .down {
+
+}
+#cont9 .container .cont9-right .down h2 {
+    position: absolute;
+    font-family: 'Playfair Display SC';
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 0.62;
+    color: #38524f;
+    top: 58vw;
+    left: 44vw;
+}
+#cont9 .container .cont9-right .down p {
+    position: absolute;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 20px;
+    line-height: 1.65;
+    letter-spacing: normal;
+    color: #38524f;
+    top: 63vw;
+    left: 44vw;
+}
+#cont9 .container .cont9-right .down a {
+    position: absolute;
+    font-family: 'Playfair Display SC';
+    font-size: 24px;
+    letter-spacing: normal;
+    color: #2a423c;
+    border-bottom: 1px solid #38524f;
+    top: 70.5vw;
+    left: 44vw;
+}
+
+/* cont10 영역 */
+#cont10 .container .cont10-left {
+    display: flex;
+}
+#cont10 .container .cont10-left .tit {
+    position: relative;
+}
+#cont10 .container .cont10-left .tit h2 {
+    font-family: Unna;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    color: #38524f;
+    border-bottom: 1px solid #38524f;
+    text-align: left;
+    padding: 80px 20px 0px 0px;
+}
+#cont10 .container .cont10-left .nam {
+    position: relative;
+}
+
+#cont10 .container .cont10-left .nam .nam1 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 60px;
+    text-align: left;
+    color: #38524f;
+    top: 5vw;
+    left: 3vw;
+}
+#cont10 .container .cont10-left .nam .nam2 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 60px;
+    text-align: left;
+    color: #38524f;
+    top: 11vw;
+    left: 3vw;
+}
+#cont10 .container .cont10-left .nam .nam3 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 60px;
+    text-align: left;
+    color: #38524f;
+    top: 17.3vw;
+    left: 3vw;
+}
+#cont10 .container .cont10-left .nam .nam4 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 60px;
+    color: #38524f;
+    top: 23.7vw;
+    left: 3vw;
+    letter-spacing: 2px;
+}
+#cont10 .container .cont10-right .link {
+    position: relative;
+}
+#cont10 .container .cont10-right .link .top {
+}
+#cont10 .container .cont10-right .link .top .top1 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    color: #38524f;
+    top: -19vw;
+    left: 50vw;
+}
+#cont10 .container .cont10-right .link .top .top2 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    color: #38524f;
+    top: -19vw;
+    left: 62vw;
+}
+#cont10 .container .cont10-right .link .bot {
+    
+}
+#cont10 .container .cont10-right .link .bot .bot1 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    color: #38524f;
+    top: -10vw;
+    left: 50vw;
+}
+#cont10 .container .cont10-right .link .bot .bot2 {
+    position: absolute;
+    font-family: Unna;
+    font-size: 36px;
+    letter-spacing: 0.72px;
+    color: #38524f;
+    top: -10vw;
+    left: 62vw;
+}
+#cont10 .container .cont10-right .txt {
+    position: relative;
+}
+#cont10 .container .cont10-right .txt p {
+    position: absolute;
+    -webkit-text-stroke: 0.2px #38524f;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 15px;
+    line-height: 1.67;
+    letter-spacing: 0.45px;
+    text-align: left;
+    color: #38524f;
+    top: -2vw;
+    left: 50vw;
+}
+#cont10 .container .cont10-bottom {position: relative;}
+#cont10 .container .cont10-bottom .res {
+    position: absolute;
+    font-family: Unna;
+    font-size: 17px;
+    letter-spacing: 1.7px;
+    color: #6d7e73;
+    top: 20vw;
+    left: 30vw;
+}
+#cont10 .container .cont10-bottom .phone {
+    position: absolute;
+    font-family: Unna;
+    font-size: 17px;
+    letter-spacing: 0.34px;
+    color: #6d7e73;
+    top: 22vw;
+    left: 35.5vw;
 }
