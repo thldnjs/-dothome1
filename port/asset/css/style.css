@@ -22,73 +22,73 @@
 /* layout 영역 */
 #wrap {
     width: 100%;
-    height: 21576px;
+    height: 1123.7500vw;
 }
 #header {
     width: 100%;
-    height: 1847px;
+    height: 96.1979vw;
     background-color: #E6E5DF;
 }
 #banner {
     width: 100%;
-    height: 2478px;
+    height: 129.0625vw;
     background-color: #E6E5DF;
 }
 #contents {
     width: 100%;
-    height: 11218px;
+    height: 584.2708vw;
     background-color: #06221F;
 }
 #footer {
     width: 100%;
-    height: 6938px;
+    height: 361.3542vw;
     background-color: #D6DECA;
 }
 .container {
-    width: 1460px;
+    width: 76.0417vw;
     height: inherit;
     margin: 0 auto;
 }
 #cont1 {
     width: 100%;
-    height: 1044px;
+    height: 54.3750vw;
 }
 #cont2 {
     width: 100%;
-    height: 2708px;
+    height: 141.0417vw;
 }
 #cont3 {
     width: 100%;
-    height: 2525px;
+    height: 131.5104vw;
 }
 #cont4 {
     width: 100%;
-    height: 2292px;
+    height: 119.3750vw;
 }
 #cont5 {
     width: 100%;
-    height: 2749px;
+    height: 143.1771vw;
 }
 #cont6 {
     width: 100%;
-    height: 1056px;
+    height: 55.0000vw;
 }
 #cont7 {
     width: 100%;
-    height: 1794px;
+    height: 93.4375vw;
     overflow: hidden;
 }
 #cont8 {
     width: 100%;
-    height: 1292px;
+    height: 67.2917vw;
 }
 #cont9 {
     width: 100%;
-    height: 1791px;
+    height: 93.2813vw;
 }
 #cont10 {
     width: 100%;
-    height: 1000px;
+    height: 52.0833vw;
 }
 /* header 메뉴 */
 #header .text {
@@ -388,7 +388,7 @@
 }
 #cont2 .container .coding .coding-right {
     width: 45.3125vw;
-    height: 60.6vh;
+    height: 30vw;
     background: #1e1e1e;
     overflow: hidden;
     border-radius: 0.2604vw;
@@ -651,7 +651,7 @@
 }
 #cont3 .container .coding .coding-left {
     width: 45.3125vw;
-    height: 60.6vh;
+    height: 30vw;
     background: #1e1e1e;
     overflow: hidden;
     border-radius: 0.2604vw;
@@ -948,7 +948,7 @@
 }
 #cont5 .container .cont5-2 .cont5-2.left {
     width: 47.9167vw;
-    height: 60.6vh;
+    height: 30vw;
     background: #1e1e1e;
     overflow: hidden;
     border-radius: 0.2604vw;
